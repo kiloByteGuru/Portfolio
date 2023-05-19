@@ -27,6 +27,7 @@ body {
 
 #greeting {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   background: none;
   font-size: 18px;
@@ -172,10 +173,6 @@ ul.social-icons li a {
 
 .social-icons.icon-rotate .fa:hover,
 .social-icons.icon-rotate .fa:active {
-  -webkit-transform: scale(1.1) rotate(360deg);
-  -moz-transform: scale(1.1) rotate(360deg);
-  -ms-transform: scale(1.1) rotate(360deg);
-  -o-transform: scale(1.1) rotate(360deg);
   transform: scale(1.1) rotate(360deg);
 }
 
@@ -186,10 +183,6 @@ ul.social-icons li a {
   text-align: center;
   color: #FFF;
   color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -208,8 +201,6 @@ ul.social-icons li a {
 .social-icons .fa:hover,
 .social-icons .fa:active {
   color: #FFF;
-  -webkit-box-shadow: 1px 1px 3px #333;
-  -moz-box-shadow: 1px 1px 3px #333;
   box-shadow: 1px 1px 3px #333;
 }
 
@@ -303,10 +294,6 @@ hr.intro-divider {
 }
 
 .social-icons.icon-rotate.fa:hover .social-icons.icon-rotate.fa:active {
-  -webkit-transform: scale(1.1) rotate(360deg);
-  -moz-transform: scale(1.1) rotate(360deg);
-  -ms-transform: scale(1.1) rotate(360deg);
-  -o-transform: scale(1.1) rotate(360deg);
   transform: scale(1.1) rotate(360deg);
 }
 
@@ -320,10 +307,6 @@ hr.intro-divider {
   line-height: 50px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -336,14 +319,8 @@ hr.intro-divider {
 }
 
 i.icon-rotate:hover i.social-icons:active {
-  -webkit-transform: scale(1.1) rotate(360deg);
-  -moz-transform: scale(1.1) rotate(360deg);
-  -ms-transform: scale(1.1) rotate(360deg);
-  -o-transform: scale(1.1) rotate(360deg);
   transform: scale(1.1) rotate(360deg);
   color: #FFF;
-  -webkit-box-shadow: 1px 1px 3px #333;
-  -moz-box-shadow: 1px 1px 3px #333;
   box-shadow: 1px 1px 3px #333;
 }
 
@@ -549,6 +526,7 @@ section.container-fluid {
   padding: 0;
   margin: 0;
   width: 100%;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -643,6 +621,7 @@ p.copyright {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  height: -moz-max-content;
   height: max-content;
   background-color: #0d5b8c;
   color: #FBC6F4;
