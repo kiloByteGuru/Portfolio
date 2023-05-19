@@ -1,0 +1,751 @@
+$size-100: 100%;
+$size-50: 50%;
+$size-25: 25%;
+$background-color:rgb(27, 166, 140);
+$background-color-secondary:#BF935E;
+$text-color-secondary:#362834;
+$text-color:#480443;
+$hover-text:#FBC6F4;
+$hover-background:#0D5B8C;
+$border-color:#FBC6F4;
+
+@function font-family-list($my-fonts: ()) {
+    @return $my-fonts;
+}
+
+$my-fonts: ('Alegreya, serif',
+    'Alegreya Sans, sans-serif',
+    'Merriweather, serif',
+    'Merriweather Sans, sans-serif',
+    'Nunito, sans-serif',
+    'Nunito Sans, sans-serif',
+    'Quattrocento, serif',
+    'Quattrocento Sans, sans-serif',
+    'Roboto, sans-serif',
+    'Roboto Mono, monospace',
+    'Roboto Slab, serif'
+);
+$my-matrix-font: 'Roboto, sans-serif',
+'Roboto Mono, monospace',
+'Roboto Slab, serif';
+$my-font-family-primary:'Merriweather, serif',
+'Merriweather Sans, sans-serif';
+$my-font-family-rest:'Alegreya, serif',
+'Alegreya Sans, sans-serif';
+
+html {
+    width: $size-100;
+    height: $size-100;
+}
+
+div#frame {
+    width: $size-100;
+    height: $size-100;
+    display: none;
+}
+
+body {
+
+    scroll-behavior: smooth;
+    width: $size-100;
+    height: $size-100;
+}
+
+#greetBackground {
+    background-image: url("pic/firstBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $size-100;
+    height: $size-100;
+    display: block;
+}
+
+#greeting {
+    width: $size-100;
+    height: fit-content;
+    background: none;
+    font-size: 18px;
+    color: #1BA68C;
+    background-color: #0000009f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: $my-matrix-font;
+}
+
+#canvas {
+    font-size: 18px;
+    color: #1BA68C;
+    height: $size-100;
+    width: $size-100;
+    background-color: black;
+    font-family: $my-matrix-font;
+}
+
+.programLanguage {
+    display: flex;
+    align-items: stretch;
+    font-size: 18px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+i[class^="fa"] svg[class^="fa"] {
+    color: $text-color;
+    font-family: $my-font-family-primary;
+
+    :hover {
+        color: $hover-text;
+    }
+}
+
+[class^="fa"] {
+    color: $text-color;
+    font-size: 20px;
+    font-family: $my-font-family-primary;
+
+    :hover {
+        color: $hover-text;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    font-family: $my-font-family-primary;
+}
+
+.navbar-toggler {
+    color: $text-color;
+    font-family: $my-font-family-primary;
+
+    :hover {
+        color: $hover-text;
+    }
+
+    border: none;
+}
+
+.navbar .navbar-default .fixed-top {
+    background: none;
+    font-family: $my-font-family-primary;
+    color: $text-color;
+}
+
+nav {
+    font-size: 16px;
+    font-family: $my-font-family-primary;
+    color: $text-color;
+    background: rgba(27, 166, 141, 0.8);
+    display: block;
+}
+
+.navbar-header {
+    font-size: 16px;
+    font-family: $my-font-family-primary;
+    color: $text-color;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.navText {
+    margin-left: 15px;
+}
+
+ul.nav.navbar-nav.navbar-right {
+    display: flex;
+
+    li {
+        display: flex;
+        align-items: space-between;
+    }
+}
+
+ul.navbar-nav li a {
+    color: $text-color;
+    font-family: $my-font-family-primary;
+}
+
+ul.navbar-nav li a:hover,
+ul.navbar-nav li a:focus {
+    color: $hover-text;
+}
+
+ul.social-icons {
+    width: $size-100;
+
+    li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $hover-text;
+        font-family: $my-font-family-primary;
+
+    }
+}
+
+.network-name {
+    font-size: 12px;
+    font-family: $my-font-family-primary;
+    color: $hover-text;
+
+}
+
+.network-name:hover {
+
+    background-color: $hover-background;
+    border-radius: 25px;
+    border-color: $border-color;
+
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.social-icons.icon-rotate .fa:hover,
+.social-icons.icon-rotate .fa:active {
+    -webkit-transform: scale(1.1) rotate(360deg);
+    -moz-transform: scale(1.1) rotate(360deg);
+    -ms-transform: scale(1.1) rotate(360deg);
+    -o-transform: scale(1.1) rotate(360deg);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.social-icons .fa {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFF;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa {
+    border-radius: 50%;
+}
+
+.social-icons.icon-rounded .fa {
+    border-radius: 5px;
+}
+
+.social-icons.icon-flat .fa {
+    border-radius: 0;
+}
+
+.social-icons .fa:hover,
+.social-icons .fa:active {
+    color: #FFF;
+    -webkit-box-shadow: 1px 1px 3px #333;
+    -moz-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+}
+
+.list-inline li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.navbar-brand {
+    color: $text-color-secondary;
+    font-family: $my-font-family-primary;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: $hover-text;
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $my-font-family-primary;
+    color: $text-color;
+
+}
+
+.intro-header {
+    text-align: center;
+    background-size: cover;
+    height: 855px;
+
+}
+
+.bg-overlay {
+    background-color: $hover-background;
+
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-message>h1 {
+    margin-top: -50px;
+    text-shadow: 2px 1px 2px #000;
+    font-size: 5em;
+    color: $hover-text;
+    font-family: $my-font-family-primary;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid $hover-text;
+    border-bottom: 1px solid $hover-text;
+}
+
+.intro-message>h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    color: $hover-text;
+    font-family: $my-font-family-primary;
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message>h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons>li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons>li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+hr.intro-divider {
+    border: 1px outset $border-color;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    width: $size-100;
+}
+
+.social-icons.icon-rotate.fa:hover {
+    .social-icons.icon-rotate.fa:active {
+        -webkit-transform: scale(1.1) rotate(360deg);
+        -moz-transform: scale(1.1) rotate(360deg);
+        -ms-transform: scale(1.1) rotate(360deg);
+        -o-transform: scale(1.1) rotate(360deg);
+        transform: scale(1.1) rotate(360deg);
+    }
+
+}
+
+.social-icons.fa {
+    font-size: 1.8em;
+}
+
+.social-icons.fa {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle.fa {
+    border-radius: 50%;
+}
+
+.social-icons.icon-rounded.fa {
+    border-radius: 5px;
+}
+
+i.icon-rotate:hover {
+    i.social-icons:active {
+        -webkit-transform: scale(1.1) rotate(360deg);
+        -moz-transform: scale(1.1) rotate(360deg);
+        -ms-transform: scale(1.1) rotate(360deg);
+        -o-transform: scale(1.1) rotate(360deg);
+        transform: scale(1.1) rotate(360deg);
+        color: #FFF;
+        -webkit-box-shadow: 1px 1px 3px #333;
+        -moz-box-shadow: 1px 1px 3px #333;
+        box-shadow: 1px 1px 3px #333;
+    }
+}
+
+.fa-facebook {
+    background-color: #3C599F;
+}
+
+.fa-github {
+    background-color: #070709;
+}
+
+.fa-instagram {
+    background-color: #4BB4F8;
+}
+
+.social-icons .fa-linkedin,
+.fa-linkedin-square {
+    background-color: #0077B5;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-size: cover;
+    height: 855px;
+    display: flex;
+    flex-direction: column;
+    width: $size-100;
+    background: url(pic/thirdBackground.jpg) no-repeat center center fixed;
+}
+
+.bg-overlay2 {
+    margin-top: -50px;
+    height: 855px;
+    background-color: #bf935e85;
+    width: $size-100;
+}
+
+img.img-responsive.img-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid $hover-text;
+
+}
+
+.container .link {
+    color: $text-color;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: $my-font-family-primary;
+
+}
+
+.container .link-footer {
+    color: $text-color;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: $my-font-family-primary;
+
+}
+
+.container .link-footer:hover {
+    color: $text-color;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: $my-font-family-primary;
+
+}
+
+.container .link:hover {
+    color: $hover-text;
+    font-weight: bold;
+    font-size: 22.5px;
+    font-family: $my-font-family-primary;
+
+}
+
+h2.section-heading {
+    margin-top: 100px;
+    font-size: 3em;
+    color: $hover-text;
+    font-family: $my-font-family-primary;
+
+}
+
+.content-section-a p {
+    font-size: 22px;
+    font-weight: bold;
+    color: $text-color-secondary;
+    font-family: $my-font-family-primary;
+
+}
+
+.content-section-a p a {
+    color: $text-color-secondary;
+    font-weight: bold;
+    font-family: $my-font-family-primary;
+
+}
+
+.img-circle {
+    margin-top: 150px;
+    border: 1px outset rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+}
+
+section {
+    color: $hover-text;
+    background: url('pic/secondBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: $my-font-family-primary;
+
+}
+
+section.container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+}
+
+#below-section {
+    color: $text-color;
+    font-family: $my-font-family-primary;
+
+}
+
+#small-text {
+    color: $hover-text;
+    font-family: $my-font-family-primary;
+
+}
+
+#portfolio .portfolio-item {
+    margin: 0 0 15px;
+    right: 0;
+    border: 1px outset rgba(255, 255, 255, 0.6);
+}
+
+#portfolio .portfolio-item:hover {
+    transition: 0.5s;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s,
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: #fff;
+    font-family: $my-font-family-primary;
+
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+    margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 25px;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+    color: #fff;
+    text-transform: none;
+    margin: 0;
+    font-family: $my-font-family-primary;
+
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+    font-style: italic;
+    font-size: 13px;
+    margin: 0;
+}
+
+#portfolio * {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: max-content;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+    padding: 100px 0;
+    background: url('pic/fourthBackground.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 755px;
+}
+
+.bg-overlay4 {
+    margin-top: -100px;
+    padding: 100px 0;
+    background: rgba(255, 255, 255, 0.3);
+    height: 755px;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+
+    ul.banner-social-buttons>li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons>li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h2.connect {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: $my-font-family-primary;
+
+}
+
+footer {
+    padding: 50px 0;
+    background: rgba(192, 192, 192, 0.9);
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+#portfolio * {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.lead {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: max-content;
+    background-color: #0d5b8c;
+    color: $hover-text;
+    font-family: $my-font-family-primary;
+
+}
+
+.btn.btn-primary {
+    color: $text-color-secondary;
+    background-color: $background-color-secondary;
+    border: 1px solid $border-color;
+    font-family: $my-font-family-primary;
+
+}
+
+.btn.btn-primary:hover {
+    color: $hover-text;
+    background-color: $hover-background;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
