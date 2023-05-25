@@ -446,10 +446,9 @@ ul.social-icons li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: flex-start;
-    align-items: flex-start;
-    justify-content: space-evenly;
-
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .intro-message>h3 {
