@@ -1,11 +1,11 @@
 $color: #480443;
-$background:#96bfe9;
-$colorHover:#240221;
-$backgroundHover:#FBC6F4;
-$color-dark:#97C0E9;
-$background-dark:#240221;
-$colorHover-dark:#FBC6F4;
-$backgroundHover-dark:#97C0E9;
+$background: #96bfe9;
+$colorHover: #240221;
+$backgroundHover: #fbc6f4;
+$color-dark: #97c0e9;
+$background-dark: #240221;
+$colorHover-dark: #fbc6f4;
+$backgroundHover-dark: #97c0e9;
 
 html {
     width: 100%;
@@ -16,21 +16,19 @@ html {
         background-color: $background;
         color: $color;
         font-family: "Merriweather, serif", "Merriweather Sans, sans-serif";
-
     }
 }
 
 .darkTheme {
     background-color: $background-dark;
     color: $color-dark;
-
 }
 
 div#frame {
     width: 100%;
     height: 100%;
-    display: flex;
     flex-direction: column;
+    display: none;
 }
 
 .sectionOne {
@@ -40,7 +38,6 @@ div#frame {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 section {
@@ -50,7 +47,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 #greetBackground {
@@ -59,7 +55,7 @@ section {
     background-position: center;
     width: 100%;
     height: 100%;
-    display: block;
+    display: none;
 }
 
 #greeting {
@@ -68,7 +64,7 @@ section {
     height: fit-content;
     background: none;
     font-size: 18px;
-    color: #1BA68C;
+    color: #1ba68c;
     background-color: rgba(0, 0, 0, 0.6235294118);
     position: absolute;
     top: 50%;
@@ -80,7 +76,7 @@ section {
 
 #canvas {
     font-size: 18px;
-    color: #1BA68C;
+    color: #1ba68c;
     height: 100%;
     width: 100%;
     background-color: black;
@@ -96,25 +92,43 @@ section {
 }
 
 i.fa-brands.fa-beat.fa-html5::before {
-    color: #DD4B25;
+    color: #dd4b25;
     font-size: 50px;
     margin-right: 15px;
 }
 
 i.fa-brands.fa-beat.fa-css3::before {
-    color: #254BDD;
+    color: #254bdd;
     font-size: 50px;
     margin-right: 15px;
 }
 
 i.fa-brands.fa-beat.fa-js::before {
-    color: #F0DB4F;
+    color: #f0db4f;
     font-size: 50px;
     margin-right: 15px;
 }
 
 i.fa-brands.fa-beat.fa-bootstrap::before {
-    color: #7811F2;
+    color: #7811f2;
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+i.fa-brands.fa-beat.fa-sass::before {
+    color: #c76494;
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+i.fa-brands.fa-beat.fa-figma::before {
+    color: #0ac87e;
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+i.fa-brands.fa-beat.fa-code::before {
+    color: $color;
     font-size: 50px;
     margin-right: 15px;
 }
@@ -123,13 +137,12 @@ i.fa-brands.fa-beat.fa-bootstrap::before {
     right: 0;
 }
 
-i[class^=fa] svg[class^=fa] {
+i[class^="fa"] svg[class^="fa"] {
     color: $color;
     font-family: "Merriweather, serif", "Merriweather Sans, sans-serif";
 }
 
 .navbar-toggler {
-
     border: none;
 }
 
@@ -170,13 +183,11 @@ nav {
 }
 
 .navText {
-
     color: $backgroundHover;
     font-family: "Merriweather, serif", "Merriweather Sans, sans-serif";
 
     .navbar-collapse:hover .navText:hover {
         color: $color;
-
     }
 }
 
@@ -238,7 +249,6 @@ li.card {
     margin: 20px 0;
     max-width: 85%;
     margin-top: auto;
-
 }
 
 .card .card-link {
@@ -323,7 +333,6 @@ a.portfolio-link {
     text-decoration: none;
     width: 100%;
     height: 100%;
-
 }
 
 l.navbar-nav li a {
@@ -332,7 +341,6 @@ l.navbar-nav li a {
 }
 
 ul.navbar-nav li a:hover {
-
     color: $colorHover;
 }
 
@@ -365,7 +373,7 @@ ul.social-icons li a {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    color: #FFF;
+    color: #fff;
     transition: all 0.3s ease-in-out;
 }
 
@@ -383,7 +391,7 @@ ul.social-icons li a {
 
 .social-icons .fa:hover,
 .social-icons .fa:active {
-    color: #FFF;
+    color: #fff;
     box-shadow: 1px 1px 3px #333;
 }
 
@@ -455,6 +463,7 @@ ul.social-icons li a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 40px;
 }
 
 .intro-message>h3 {
@@ -533,32 +542,29 @@ hr.intro-divider {
 
 i.icon-rotate:hover i.social-icons:active {
     transform: scale(1.1) rotate(360deg);
-    color: #FFF;
+    color: #fff;
     box-shadow: 1px 1px 3px #333;
 }
 
 .fa-facebook {
-    background-color: #3C599F;
+    background-color: #3c599f;
     color: #ffffffcc;
 }
 
 .fa-github {
     background-color: #070709;
     color: #ffffffcc;
-
 }
 
 .fa-instagram {
-    background-color: #4BB4F8;
+    background-color: #4bb4f8;
     color: #ffffffcc;
-
 }
 
 .social-icons .fa-linkedin,
 .fa-linkedin-square {
-    background-color: #0077B5;
+    background-color: #0077b5;
     color: #ffffffcc;
-
 }
 
 .content-section-a {
@@ -568,10 +574,23 @@ i.icon-rotate:hover i.social-icons:active {
     width: 100%;
 }
 
-img.img-responsive.img-circle {
+#mojaMalenkost {
     width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    height: 400px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-content: space-around;
 }
 
 .container .link {
@@ -599,7 +618,7 @@ img.img-responsive.img-circle {
 
 h2.section-heading {
     margin-top: 15px;
-    font-size: 3em;
+    font-size: 30px;
 }
 
 .content-section-a p {
@@ -706,7 +725,7 @@ section.container-fluid {
 .section-heading-spacer {
     float: left;
     width: 200px;
-    border-top: 3px solid $backgroundHover
+    border-top: 3px solid $backgroundHover;
 }
 
 .banner {
@@ -781,20 +800,11 @@ p.copyright {
 }
 
 a.i.fa-solid,
-::before,
 span.navText {
     color: $backgroundHover;
     font-size: 20px;
 
     margin: 5px 10px 5px 10px;
-
-}
-
-a.i.fa-solid,
-::before,
-span.navText:hover {
-    color: #ffffffcc;
-
 }
 
 li>a {
