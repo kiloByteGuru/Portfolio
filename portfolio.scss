@@ -28,7 +28,8 @@ div#frame {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    display: none;
+    display: block;
+    overflow: hidden;
 }
 
 .sectionOne {
@@ -141,6 +142,11 @@ i.fa-brands.fa-beat.fa-code::before {
 i[class^="fa"] svg[class^="fa"] {
     color: $color;
     font-family: "Merriweather, serif", "Merriweather Sans, sans-serif";
+}
+
+#aboutMe>span.text-center {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+
 }
 
 .navbar-toggler {
@@ -347,6 +353,7 @@ ul.navbar-nav li a:hover {
 
 ul.social-icons {
     width: 100%;
+    margin-top: 100px;
 }
 
 ul.social-icons li a {
@@ -618,7 +625,7 @@ i.icon-rotate:hover i.social-icons:active {
 }
 
 h2.section-heading {
-    margin-top: 15px;
+    margin-top: 100px;
     font-size: 30px;
 }
 
@@ -640,6 +647,7 @@ section.container-fluid {
     flex-wrap: wrap;
     align-content: stretch;
     align-items: center;
+    margin-top: 100px;
 }
 
 #portfolio .portfolio-item {
@@ -796,8 +804,26 @@ p.copyright {
 #contact-form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 100px;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 50%;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $backgroundHover;
+
 }
 
 a.i.fa-solid,
@@ -811,6 +837,10 @@ span.navText {
 li>a {
     text-decoration: none;
     font-size: 20px;
+    color: $color;
 }
 
+li>a:hover {
+    color: $colorHover;
+}
 /*# sourceMappingURL=portfolio.css.map */
