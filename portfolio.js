@@ -88,7 +88,6 @@ form.addEventListener('submit', function (event) {
 
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
-    const subject = document.querySelector('#subject').value;
     const message = document.querySelector('#message').value;
 
     const headers = new Headers({
@@ -109,7 +108,6 @@ form.addEventListener('submit', function (event) {
             email: email,
             name: name
         },
-        subject: subject,
         content: [
             {
                 type: 'text/plain',
@@ -122,7 +120,7 @@ form.addEventListener('submit', function (event) {
         method: 'POST',
         headers: headers,
         body: body,
-        Authorization: 'Bearer cY_FJT3aTF-1JSGZiPRP6A '
+        Authorization: 'Bearer  ••••••••••••••••••••  '
     })
         .then(response => {
             if (response.ok) {

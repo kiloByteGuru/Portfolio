@@ -25,10 +25,14 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/cddafc2ead.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-        integrity = "sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin = "anonymous" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <script src="jquery-3.6.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/additional-methods.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
     <link rel="stylesheet" href="portfolio.css" />
 </head>
 
@@ -234,36 +238,107 @@
             </ul>
             <h2 class="section-heading">Or send me an email</h2>
 
-            <div class="row">
-                <form id="contact-form">
-                    <input type="text" name="user_name" class="col-lg-6" placeholder="Your Name" />
-                    <input type="email" name="user_email" class="col-lg-6" placeholder="Your Email" />
-                    <input type="text" name="message" class="col-lg-6" placeholder="Your Message"></input>
-
-                    <input type="submit" value="Send" class="btn btn-primary w-20" />
-                    <script type="text/javascript"
-                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-                    <script type="text/javascript">
-
-
-
-
-                            $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
-                                type: "POST",
-                                data: formData,
-                                contentType: false, // auto-detection
-                                processData: false, // no need to parse formData to string
-                            })
-                                .done(function () {
-                                    alert("Your mail is sent!");
-                                })
-                                .fail(function (error) {
-                                    alert("Oops... " + JSON.stringify(error));
-                                });
-
-                    </script>
-                </form>
+           v class="contact-form">
+            <h1>Contact me</h1>
+            <form id="contact-form" method="POST" action="form-to-email.php">
+        
+                <div class="control-group">
+                    <label>Your Name</label>
+                    <input class="fullname" type="text" name="fullname" />
+                </div>
+        
+                <div class="control-group">
+                    <label>Email</label>
+                    <input class="email" type="text" name="email" />
+                </div>
+        
+        
+                <div class="control-group">
+                    <label>Message</label>
+                    <textarea class="message" name="message"></textarea>
+                </div>
+        
+                <div id="errors"></div>
+        
+                <div class="control-group no-margin">
+                    <input type="submit" name="submit" value="Submit" id="submit" />
+                </div>
+        
+            </form>
+            <div id='msg_submitting'>
+                <h2>Submitting ...</h2>
             </div>
+            <div id='msg_submitted'>
+                <h2>Thank you !<br> The form was submitted Successfully.</h2>
+            </div>
+        </div>
+        
+        <script>
+            $(document).ready(function () {
+
+                $("#contact-form").validate({
+                    rules: {
+                        fullname: {
+                            required: true
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        message: {
+                            required: true,
+                            maxlength: 8000
+                        }
+                    },
+
+                    messages: { // custom messages
+                        fullname: {
+                            required: "Please enter your name"
+                        },
+                        email: {
+                            required: "Please enter your email address"
+                        },
+                        message: {
+                            required: "enter your message",
+                            maxlength: jQuery.format("The maxlength for message is {0} !")
+                        },
+                    },
+
+                    submitHandler: function (form) {
+                        $form = $(form);
+                        $container = $form.parent();
+                        w = $form.outerWidth();
+                        h = $form.outerHeight();
+                        $form.hide();
+
+                        $('#msg_submitting', $container).width(w).height(h).fadeIn(1000);
+                        $.ajax({
+                            type: "POST",
+                            url: $form.attr('action'),
+                            data: $form.serialize(),
+                            success: function (data) {
+                                $('#msg_submitting', $container).hide();
+                                if (data == 'success') {
+                                    $('#msg_submitted', $container).width(w).height(h).fadeIn(1000);
+                                }
+                                else {
+                                    $('#errors', $container).html(data).show();
+                                    $form.show();
+                                }
+                            }
+                        });
+
+                        return false;
+
+                    }
+
+                });
+
+            });
+        </script>
+        <!-- JavaScript Files -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- End JavaScript Files -->
         </div>
         <!-- /.banner -->
 
@@ -285,7 +360,6 @@
 
         <script src="portfolio.js" defer></script>
 
-    </div>
 
 </body>
 
