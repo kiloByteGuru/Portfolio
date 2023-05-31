@@ -16,29 +16,21 @@
     <!-- Fonts and icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&family=Playfair:opsz@5..1200&family=Quicksand&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/cddafc2ead.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <script src="jquery-3.6.4.min.js"></script>
 
     <link rel="stylesheet" href="portfolio.css" />
 </head>
 
 <body>
-    <div id="greetBackground">
-    </div>
-    <canvas id="canvas" class="w-100 h-100 container-fluid ">
-    </canvas>
-    <div id="frame" class="w-100 h-100 container-fluid  flex-column align-items-center ">
+    <div id="greetBackground"></div>
+    <canvas id="canvas" class="w-100 h-100 container-fluid"> </canvas>
+    <div id="frame" class="w-100 h-100 container-fluid flex-column align-items-center">
         <section>
             <nav class="navbar fixed-top d-flex justify-content-end" role="navigation">
                 <div class="navbar-header">
@@ -124,30 +116,26 @@
                 <span class="text-center">About me</span>
                 <hr class="intro-divider" />
                 <p class="lead container-fluid w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                    Hello and welcome to my portfolio! I am an entry-level Frontend
-                    Developer with a solid foundation in HTML, CSS, SASS, Bootstrap,
-                    vanilla JavaScript, TypeScript, UI/UX design, Figma and website
-                    building. <br />
+                    I am an entry-level Frontend Developer with a solid foundation in
+                    HTML, CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX
+                    design, Figma and website building.<br />
 
                     Prior to pursuing a career in IT, I spent 21 years working as a
                     physiotherapist in a hospital setting. During this time, I developed
                     a strong work ethic, excellent communication skills, and the ability
-                    to work under pressure while maintaining attention to detail. <br />
+                    to work under pressure while maintaining attention to detail as
+                    individual as well as in team.<br />
 
                     My passion for website development grew while attending IT Academy
                     in Sarajevo, where I gained valuable hands-on experience using
                     industry-standard tools and techniques. I am eager to learn more and
                     continue to improve my skills as I embark on this exciting new
-                    career path. <br />
-
+                    career path.<br />
                     As a developer, I am committed to creating high-quality,
                     user-friendly websites that provide the best possible experience for
                     the end user. I am a responsible and reliable individual who takes
-                    pride in delivering work that exceeds expectations. <br />
-
-                    Thank you for taking the time to view my portfolio, and I look
-                    forward to the opportunity to work with you and contribute to the
-                    success of your projects. <br />
+                    pride in delivering work that exceeds expectations for contribution
+                    of your project.
                 </p>
             </div>
         </section>
@@ -232,23 +220,16 @@
                             class="fa fa-linkedin"></i></a>
                 </li>
             </ul>
- <form id="my-form" action="https://formspree.io/f/mwkjjdzy" method="POST">
-    <label>Email:</label>
-    <input type="email" name="email" />
-    <label>Message:</label>
-    <input type="text" name="message" />
-    <button id="my-form-button">Submit</button>
-    <p id="my-form-status"></p>
-</form>
-<!-- Place this script at the end of the body tag -->
-
-
-
-
-
-
+            <form id="my-form" action="https://formspree.io/f/mwkjjdzy" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+            </form>
+            <!-- Place this script at the end of the body tag -->
         </div>
-
 
         <!-- JavaScript Files -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -285,32 +266,32 @@
                 method: form.method,
                 body: data,
                 headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    status.innerHTML = "Thanks for your submission!";
-                    form.reset()
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                        } else {
-                            status.innerHTML = "Oops! There was a problem submitting your form"
-                        }
-                    })
-                }
-            }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
-            });
+                    Accept: "application/json",
+                },
+            })
+                .then(response => {
+                    if (response.ok) {
+                        status.innerHTML = "Thanks for your submission!";
+                        form.reset();
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, "errors")) {
+                                status.innerHTML = data["errors"]
+                                    .map(error => error["message"])
+                                    .join(", ");
+                            } else {
+                                status.innerHTML =
+                                    "Oops! There was a problem submitting your form";
+                            }
+                        });
+                    }
+                })
+                .catch(error => {
+                    status.innerHTML = "Oops! There was a problem submitting your form";
+                });
         }
-        form.addEventListener("submit", handleSubmit)
+        form.addEventListener("submit", handleSubmit);
     </script>
-
-
 </body>
-
-
-
 
 </html>
