@@ -69,7 +69,7 @@ window.addEventListener(`load`, function () {
         }
 
         requestAnimationFrame(draw);
-    }, 3000);
+    },100);
 });
 window.addEventListener(`click`, function () {
     let greeting = document.getElementById(`greeting`);
@@ -78,59 +78,23 @@ window.addEventListener(`click`, function () {
 
     canvas.remove();
     greeting.remove();
-    secondBackground.style.setProperty(`display`, `block`);
+    secondBackground.style.setProperty(`display`, `flex`);
     document.body.appendChild(secondBackground);
 });
-const form = document.querySelector('form');
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const message = document.querySelector('#message').value;
-
-    const headers = new Headers({
-        'Content-Type': 'application/json'
-    });
-
-    const body = JSON.stringify({
-        personalizations: [
-            {
-                to: [
-                    {
-                        email: 'jasenkobozinovic@gmail.com'
-                    }
-                ]
-            }
-        ],
-        from: {
-            email: email,
-            name: name
-        },
-        content: [
-            {
-                type: 'text/plain',
-                value: message
-            }
-        ]
-    });
-
-    fetch('https://api.sendgrid.com/v3/mail/send', {
-        method: 'POST',
-        headers: headers,
-        body: body,
-        Authorization: 'Bearer  ••••••••••••••••••••  '
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+const msg = {
+    to: 'jasenkobozinovic@gmail.com', // Change to your recipient
+    from: 'jasenkobozinovic@gmail.com', // Change to your verified sender
+    subject: 'Sending with SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+}
+sgMail
+    .send(msg)
+    .then(() => {
+        console.log('Email sent')
     })
-        .then(response => {
-            if (response.ok) {
-                alert('Email sent!');
-            } else {
-                alert('Email could not be sent. Error: ' + response.status);
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            alert('Email could not be sent. Error: ' + error.message);
-        });
-});
+    .catch((error) => {
+        console.error(error)
+    })

@@ -34,12 +34,11 @@
 </head>
 
 <body>
-    <div class="container-fluid" id="greetBackground">
-
+    <div id="greetBackground">
     </div>
-    <canvas id="canvas" class="w-100 h-100">
+    <canvas id="canvas" class="w-100 h-100 container-fluid ">
     </canvas>
-    <div id="frame">
+    <div id="frame" class="w-100 h-100 container-fluid  flex-column align-items-center ">
         <section>
             <nav class="navbar fixed-top d-flex justify-content-end" role="navigation">
                 <div class="navbar-header">
@@ -233,44 +232,21 @@
                             class="fa fa-linkedin"></i></a>
                 </li>
             </ul>
-            <h2 class="section-heading">Or send me an email</h2>
-
-            v class="contact-form">
-            <h1>Contact me</h1>
-            <form id="contact-form" method="POST" action="form-to-email.php">
-
-                <div class="control-group">
-                    <label>Your Name</label>
-                    <input class="fullname" type="text" name="fullname" />
-                </div>
-
-                <div class="control-group">
-                    <label>Email</label>
-                    <input class="email" type="text" name="email" />
-                </div>
-
-
-                <div class="control-group">
-                    <label>Message</label>
-                    <textarea class="message" name="message"></textarea>
-                </div>
-
-                <div id="errors"></div>
-
-                <div class="control-group no-margin">
-                    <input type="submit" name="submit" value="Submit" id="submit" />
-                </div>
-
-            </form>
+ <form id="my-form" action="https://formspree.io/f/mwkjjdzy" method="POST">
+    <label>Email:</label>
+    <input type="email" name="email" />
+    <label>Message:</label>
+    <input type="text" name="message" />
+    <button id="my-form-button">Submit</button>
+    <p id="my-form-status"></p>
+</form>
+<!-- Place this script at the end of the body tag -->
 
 
 
-            <div id='msg_submitting'>
-                <h2>Submitting ...</h2>
-            </div>
-            <div id='msg_submitted'>
-                <h2>Thank you !<br> The form was submitted Successfully.</h2>
-            </div>
+
+
+
         </div>
 
 
@@ -296,12 +272,40 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="jquery.validate.min.js"></script>
-    <script type="text/javascript" src="additional-methods.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
 
     <script src="portfolio.js" defer></script>
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thanks for your submission!";
+                    form.reset()
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 
 
 </body>
