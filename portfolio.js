@@ -69,7 +69,7 @@ window.addEventListener(`load`, function () {
         }
 
         requestAnimationFrame(draw);
-    },100);
+    }, 100);
 });
 window.addEventListener(`click`, function () {
     let greeting = document.getElementById(`greeting`);

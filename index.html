@@ -2,296 +2,251 @@
 <html lang="en">
 
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" />
-    <meta name="viewport" content="width=device-width" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width" />
 
-    <title>Jasenko Bozinovic Portfolio</title>
+  <title>Jasenko Bozinovic Portfolio</title>
 
-    <!-- Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&family=Playfair:opsz@5..1200&family=Quicksanddisplay=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/cddafc2ead.js" crossorigin="anonymous"></script>
 
-    <!-- Fonts and icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&family=Playfair:opsz@5..1200&family=Quicksand&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="https://kit.fontawesome.com/cddafc2ead.js" crossorigin="anonymous"></script>
-    <!-- Scripts -->
-
-    <link rel="stylesheet" href="portfolio.css" />
 </head>
 
 <body>
-    <div id="greetBackground"></div>
-    <canvas id="canvas" class="w-100 h-100 container-fluid"> </canvas>
-    <div id="frame" class="w-100 h-100 container-fluid flex-column align-items-center">
-        <section>
-            <nav class="navbar fixed-top d-flex justify-content-end" role="navigation">
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#home">
-                                <i class="fa-solid fa-house-chimney">
-                                    <span class="navText">HOME</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about"><i class="fa-solid fa-info"><span class="navText">ABOUT ME</span></i></a>
-                        </li>
-                        <li>
-                            <a href="#portfolio"><i class="fa-solid fa-code-fork"><span
-                                        class="navText">SHOWCASE</span></i></a>
-                        </li>
-                        <li>
-                            <a href="#contact"><i class="fa-solid fa-address-card"><span class="navText">HIRE
-                                        ME</span></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </nav>
-            <!-- Header -->
-            <a name="home"></a>
-
-            <div id="sectionOne" class="container-fluid">
-                <div class="w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4 intro-message">
-                    <span class="text-center">My name is Jasenko Božinovic </span>
-                    <img id="mojaMalenkost" src="pic/profilna.png" alt="img" />
-                    <h3>I am a frontend web developer. I work with:</h3>
-
-                    <div class="programLanguage w-100 h-100">
-                        <span class="ml-3 mr-5 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-brands fa-beat fa-html5"></i>
-                            <span class="network-name ml-5">HTML</span>
-                        </span>
-                        <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-brands fa-beat fa-css3"></i>
-                            <span class="network-name ml-5">CSS</span>
-                        </span>
-                        <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-brands fa-beat fa-js"></i>
-                            <span class="network-name ml-5">JavaScript/Typescript</span>
-                        </span>
-                        <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-brands fa-beat fa-bootstrap"></i>
-                            <span class="network-name ml-5">Bootsrap</span>
-                        </span>
-                        <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-brands fa-beat fa-sass"></i>
-                            <span class="network-name ml-5">SASS</span>
-                        </span>
-                        <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-brands fa-beat fa-figma"></i>
-                            <span class="network-name ml-5">Figma</span>
-                        </span>
-                        <span class="mr-3 d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-solid fa-beat fa-code"></i>
-                            <span class="network-name ml-5">Web development</span>
-                        </span>
-                    </div>
-                    <h3>Let's bring your ideas to life!</h3>
-                    <hr class="intro-divider" />
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <a name="about"></a>
-
-            <div class="container-fluid w-100 col-md-8 col-sm-6 col-xs-4" id="aboutMe">
-                <span class="text-center">About me</span>
-                <hr class="intro-divider" />
-                <p class="lead container-fluid w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                    I am an entry-level Frontend Developer with a solid foundation in
-                    HTML, CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX
-                    design, Figma and website building.<br />
-
-                    Prior to pursuing a career in IT, I spent 21 years working as a
-                    physiotherapist in a hospital setting. During this time, I developed
-                    a strong work ethic, excellent communication skills, and the ability
-                    to work under pressure while maintaining attention to detail as
-                    individual as well as in team.<br />
-
-                    My passion for website development grew while attending IT Academy
-                    in Sarajevo, where I gained valuable hands-on experience using
-                    industry-standard tools and techniques. I am eager to learn more and
-                    continue to improve my skills as I embark on this exciting new
-                    career path.<br />
-                    As a developer, I am committed to creating high-quality,
-                    user-friendly websites that provide the best possible experience for
-                    the end user. I am a responsible and reliable individual who takes
-                    pride in delivering work that exceeds expectations for contribution
-                    of your project.
-                </p>
-            </div>
-        </section>
-        <a name="portfolio"></a>
-        <section id="portfolio" class="container-fluid">
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4 text-center">
-                <h2 class="section-heading">
-                    Below you'll find some of my recent work.
-                </h2>
-                <hr class="intro-divider" />
-                <ul class="cards">
-                    <li class="card">
-                        <a href="https://kilobyteguru.github.io/Black-Flag/" target="_blank" class="portfolio-link"
-                            data-toggle="modal">
-                            <h3 class="card-title">Games selling web store landing page</h3>
-                            <div class="card-container">
-                                <img src="pic/Screenshot 2023-05-19 at 05-35-23 BLACK FLAG online store for PC games.png"
-                                    class="img-responsive" alt="" />
-                            </div>
-                            <div class="card-link-wrapper">
-                                <p>HTML / CSS / JavaScript / SASS / Bootstrap</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card">
-                        <a href="https://kilobyteguru.github.io/simple-credit-card/" target="_blank"
-                            class="portfolio-link" data-toggle="modal">
-                            <h3 class="card-title">Credit card checkout form</h3>
-                            <div class="card-container">
-                                <img src="pic/Screenshot 2023-05-19 at 14-33-29 CREDIT CARD CHECKOUT.png"
-                                    class="img-responsive" alt="" />
-                            </div>
-                            <div class="card-link-wrapper">
-                                <p>HTML / CSS / JavaScript / Bootstrap</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card">
-                        <a href="https://kilobyteguru.github.io/memory-game/" target="_blank" class="portfolio-link"
-                            data-toggle="modal">
-                            <h3 class="card-title">Memory game</h3>
-                            <div class="card-container">
-                                <img src="pic/memory-screenshot.png" class="img-responsive" alt="" />
-                            </div>
-                            <div class="card-link-wrapper">
-                                <p>JavaScript / CSS / HTML</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="card">
-                        <a href="https://kilobyteguru.github.io/simple-draw-app/" target="_blank" class="portfolio-link"
-                            data-toggle="modal">
-                            <h3 class="card-title">Simple drawing app</h3>
-                            <div class="card-container">
-                                <img src="pic/drawApp.png" class="img-responsive" alt="" />
-                            </div>
-                            <div class="card-link-wrapper">
-                                <p>JavaScript / CSS / HTML</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <a name="contact"></a>
-
-        <div class="container-fluid col-lg-12 col-md-8 col-sm-6 col-xs-4">
-            <h2 class="section-heading">Contact me over</h2>
-            <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline d-flex justify-content-evenly">
-                <li>
-                    <a href="https://www.facebook.com/Sinner211?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/alfa.gong.gong/"><i class="fa fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="https://github.com/kiloByteGuru"><i class="fa fa-github"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/jasenko-bozinovic-9032b6175/"><i
-                            class="fa fa-linkedin"></i></a>
-                </li>
-            </ul>
-            <form id="my-form" action="https://formspree.io/f/mwkjjdzy" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email" />
-                <label>Message:</label>
-                <input type="text" name="message" />
-                <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
-            </form>
-            <!-- Place this script at the end of the body tag -->
+  <div id="greetBackground"></div>
+  <canvas id="canvas" class="w-100 h-100 container-fluid"> </canvas>
+  <div id="frame" class="w-100 h-100 container-fluid flex-column align-items-center">
+    <section>
+      <nav class="navbar fixed-top d-flex justify-content-end" role="navigation">
+        <div class="navbar-header">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#home">
+                <i class="fa-solid fa-house-chimney">
+                  <span class="navText">HOME</span>
+                </i>
+              </a>
+            </li>
+            <li>
+              <a href="#about"><i class="fa-solid fa-info"><span class="navText">ABOUT
+                    ME</span></i></a>
+            </li>
+            <li>
+              <a href="#portfolio"><i class="fa-solid fa-code-fork"><span class="navText">SHOWCASE</span></i></a>
+            </li>
+            <li>
+              <a href="#contact"><i class="fa-solid fa-address-card"><span class="navText">HIRE
+                    ME</span></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a name="home"></a>
 
-        <!-- JavaScript Files -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <!-- End JavaScript Files -->
+      <div id="sectionOne" class="container-fluid">
+        <div class="w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4 intro-message">
+          <span class="text-center">My name is Jasenko Božinovic </span>
+          <img id="mojaMalenkost" src="pic/profilna.png" alt="img" />
+          <h3>I am a frontend web developer. I work with:</h3>
 
-        <!-- /.banner -->
+          <div class="programLanguage w-100 h-100">
+            <span class="ml-3 mr-5 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-brands fa-beat fa-html5"></i>
+              <span class="network-name ml-5">HTML</span>
+            </span>
+            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-brands fa-beat fa-css3"></i>
+              <span class="network-name ml-5">CSS</span>
+            </span>
+            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-brands fa-beat fa-js"></i>
+              <span class="network-name ml-5">JavaScript/Typescript</span>
+            </span>
+            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-brands fa-beat fa-bootstrap"></i>
+              <span class="network-name ml-5">Bootsrap</span>
+            </span>
+            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-brands fa-beat fa-sass"></i>
+              <span class="network-name ml-5">SASS</span>
+            </span>
+            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-brands fa-beat fa-figma"></i>
+              <span class="network-name ml-5">Figma</span>
+            </span>
+            <span class="mr-3 d-flex flex-column align-items-center justify-content-center">
+              <i class="fa-solid fa-beat fa-code"></i>
+              <span class="network-name ml-5">Web development</span>
+            </span>
+          </div>
+          <h3>Let's bring your ideas to life!</h3>
+          <hr class="intro-divider" />
+        </div>
+      </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="#">
-                            <p class="copyright text-muted small">
-                                Copyright &copy; alfaGongGong
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    <section>
+      <a name="about"></a>
+
+      <div class="container-fluid w-100 col-md-8 col-sm-6 col-xs-4" id="aboutMe">
+        <span class="text-center">About me</span>
+        <hr class="intro-divider" />
+        <p class="lead container-fluid w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4">
+          I am an entry-level Frontend Developer with a solid foundation in
+          HTML, CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX
+          design, Figma and website building.<br />
+
+          Prior to pursuing a career in IT, I spent 21 years working as a
+          physiotherapist in a hospital setting. During this time, I developed
+          a strong work ethic, excellent communication skills, and the ability
+          to work under pressure while maintaining attention to detail as
+          individual as well as in team.<br />
+
+          My passion for website development grew while attending IT Academy
+          in Sarajevo, where I gained valuable hands-on experience using
+          industry-standard tools and techniques. I am eager to learn more and
+          continue to improve my skills as I embark on this exciting new
+          career path.<br />
+          As a developer, I am committed to creating high-quality,
+          user-friendly websites that provide the best possible experience for
+          the end user. I am a responsible and reliable individual who takes
+          pride in delivering work that exceeds expectations for contribution
+          of your project.
+        </p>
+      </div>
+    </section>
+    <a name="portfolio"></a>
+    <section id="portfolio" class="container-fluid">
+      <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4 text-center">
+        <h2 class="section-heading">
+          Below you'll find some of my recent work.
+        </h2>
+        <hr class="intro-divider" />
+        <ul class="cards">
+          <li class="card">
+            <a href="https://kilobyteguru.github.io/Black-Flag/" target="_blank" class="portfolio-link"
+              data-toggle="modal">
+              <h3 class="card-title">Games selling web store landing page</h3>
+              <div class="card-container">
+                <img src="pic/Screenshot 2023-05-19 at 05-35-23 BLACK FLAG online store for PC games.png"
+                  class="img-responsive" alt="" />
+              </div>
+              <div class="card-link-wrapper">
+                <p>HTML / CSS / JavaScript / SASS / Bootstrap</p>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://kilobyteguru.github.io/simple-credit-card/" target="_blank" class="portfolio-link"
+              data-toggle="modal">
+              <h3 class="card-title">Credit card checkout form</h3>
+              <div class="card-container">
+                <img src="pic/Screenshot 2023-05-19 at 14-33-29 CREDIT CARD CHECKOUT.png" class="img-responsive"
+                  alt="" />
+              </div>
+              <div class="card-link-wrapper">
+                <p>HTML / CSS / JavaScript / Bootstrap</p>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://kilobyteguru.github.io/memory-game/" target="_blank" class="portfolio-link"
+              data-toggle="modal">
+              <h3 class="card-title">Memory game</h3>
+              <div class="card-container">
+                <img src="pic/memory-screenshot.png" class="img-responsive" alt="" />
+              </div>
+              <div class="card-link-wrapper">
+                <p>JavaScript / CSS / HTML</p>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="https://kilobyteguru.github.io/simple-draw-app/" target="_blank" class="portfolio-link"
+              data-toggle="modal">
+              <h3 class="card-title">Simple drawing app</h3>
+              <div class="card-container">
+                <img src="pic/drawApp.png" class="img-responsive" alt="" />
+              </div>
+              <div class="card-link-wrapper">
+                <p>JavaScript / CSS / HTML</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <a name="contact"></a>
+
+    <div class="container-fluid col-lg-12 col-md-8 col-sm-6 col-xs-4">
+      <h2 class="section-heading">Contact me over</h2>
+      <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline d-flex justify-content-evenly">
+        <li>
+          <a href="https://www.facebook.com/Sinner211?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/alfa.gong.gong/"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/kiloByteGuru"><i class="fa fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jasenko-bozinovic-9032b6175/"><i class="fa fa-linkedin"></i></a>
+        </li>
+      </ul>
+      <form id="my-form" action="https://formspree.io/f/mwkjjdzy" method="POST">
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <label>Message:</label>
+        <input type="text" name="message" />
+        <button id="my-form-button">Submit</button>
+        <p id="my-form-status"></p>
+      </form>
+      <!-- Place this script at the end of the body tag -->
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="portfolio.js" defer></script>
-    <script>
-        var form = document.getElementById("my-form");
+    <!-- JavaScript Files -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- End JavaScript Files -->
 
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.getElementById("my-form-status");
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    Accept: "application/json",
-                },
-            })
-                .then(response => {
-                    if (response.ok) {
-                        status.innerHTML = "Thanks for your submission!";
-                        form.reset();
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, "errors")) {
-                                status.innerHTML = data["errors"]
-                                    .map(error => error["message"])
-                                    .join(", ");
-                            } else {
-                                status.innerHTML =
-                                    "Oops! There was a problem submitting your form";
-                            }
-                        });
-                    }
-                })
-                .catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form";
-                });
-        }
-        form.addEventListener("submit", handleSubmit);
-    </script>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <a href="#">
+              <p class="copyright text-muted small">
+                Copyright &copy; alfaGongGong
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="portfolio.js" defer></script>
+
 </body>
 
 </html>

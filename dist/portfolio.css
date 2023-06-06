@@ -3,6 +3,7 @@ html {
   height: 100%;
   scroll-behavior: smooth;
 }
+
 html body {
   background-color: #96bfe9;
   color: #480443;
@@ -170,6 +171,7 @@ nav {
   color: #FBC6F4;
   font-family: "Merriweather, serif", "Merriweather Sans, sans-serif";
 }
+
 .navText .navbar-collapse:hover .navText:hover {
   color: #480443;
 }
@@ -274,6 +276,7 @@ li.card {
     margin-right: 20px;
   }
 }
+
 @media (min-width: 700px) {
   .card {
     flex-basis: calc(calc(100% / 3) - 20px);
@@ -283,6 +286,7 @@ li.card {
     margin-right: 30px;
   }
 }
+
 @media (min-width: 1100px) {
   .card {
     flex-basis: calc(25% - 30px);
@@ -292,6 +296,7 @@ li.card {
     margin-right: 40px;
   }
 }
+
 ul.nav.navbar-nav.navbar-right {
   display: flex;
 }
@@ -416,7 +421,7 @@ ul.social-icons li a {
   justify-content: center;
 }
 
-.intro-message > span {
+.intro-message>span {
   margin-top: -50px;
   text-shadow: 2px 1px 2px #000;
   font-size: 5em;
@@ -445,7 +450,7 @@ ul.social-icons li a {
   text-align: center;
 }
 
-.intro-message > h3 {
+.intro-message>h3 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
@@ -454,17 +459,17 @@ ul.social-icons li a {
     padding-bottom: 15%;
   }
 
-  .intro-message > h1 {
+  .intro-message>h1 {
     font-size: 3em;
   }
 
-  ul.intro-social-buttons > li {
+  ul.intro-social-buttons>li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
 
-  ul.intro-social-buttons > li:last-child {
+  ul.intro-social-buttons>li:last-child {
     margin-bottom: 0;
   }
 
@@ -472,6 +477,7 @@ ul.social-icons li a {
     width: 100%;
   }
 }
+
 hr.intro-divider {
   border: 1px outset #FBC6F4;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
@@ -686,6 +692,7 @@ section.container-fluid {
     margin: 0 0 30px;
   }
 }
+
 .section-heading-spacer {
   float: left;
   width: 200px;
@@ -713,16 +720,17 @@ section.container-fluid {
     margin-top: 15px;
   }
 
-  ul.banner-social-buttons > li {
+  ul.banner-social-buttons>li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
 
-  ul.banner-social-buttons > li:last-child {
+  ul.banner-social-buttons>li:last-child {
     margin-bottom: 0;
   }
 }
+
 h2.connect {
   margin: 0;
 }
@@ -776,7 +784,7 @@ span.navText:hover {
   color: #ffffffcc;
 }
 
-li > a {
+li>a {
   text-decoration: none;
   font-size: 20px;
 }
