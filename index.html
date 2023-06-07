@@ -2,251 +2,259 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" />
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Jasenko Bozinovic Portfolio</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&family=Playfair:opsz@5..1200&family=Quicksanddisplay=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48100..700,0..1,-50..200" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasenko Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/cddafc2ead.js" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css'>
 </head>
 
 <body>
-  <div id="greetBackground"></div>
-  <canvas id="canvas" class="w-100 h-100 container-fluid"> </canvas>
-  <div id="frame" class="w-100 h-100 container-fluid flex-column align-items-center">
-    <section>
-      <nav class="navbar fixed-top d-flex justify-content-end" role="navigation">
-        <div class="navbar-header">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#home">
-                <i class="fa-solid fa-house-chimney">
-                  <span class="navText">HOME</span>
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="#about"><i class="fa-solid fa-info"><span class="navText">ABOUT
-                    ME</span></i></a>
-            </li>
-            <li>
-              <a href="#portfolio"><i class="fa-solid fa-code-fork"><span class="navText">SHOWCASE</span></i></a>
-            </li>
-            <li>
-              <a href="#contact"><i class="fa-solid fa-address-card"><span class="navText">HIRE
-                    ME</span></i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <a name="home"></a>
-
-      <div id="sectionOne" class="container-fluid">
-        <div class="w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4 intro-message">
-          <span class="text-center">My name is Jasenko Božinovic </span>
-          <img id="mojaMalenkost" src="pic/profilna.png" alt="img" />
-          <h3>I am a frontend web developer. I work with:</h3>
-
-          <div class="programLanguage w-100 h-100">
-            <span class="ml-3 mr-5 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-brands fa-beat fa-html5"></i>
-              <span class="network-name ml-5">HTML</span>
-            </span>
-            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-brands fa-beat fa-css3"></i>
-              <span class="network-name ml-5">CSS</span>
-            </span>
-            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-brands fa-beat fa-js"></i>
-              <span class="network-name ml-5">JavaScript/Typescript</span>
-            </span>
-            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-brands fa-beat fa-bootstrap"></i>
-              <span class="network-name ml-5">Bootsrap</span>
-            </span>
-            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-brands fa-beat fa-sass"></i>
-              <span class="network-name ml-5">SASS</span>
-            </span>
-            <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-brands fa-beat fa-figma"></i>
-              <span class="network-name ml-5">Figma</span>
-            </span>
-            <span class="mr-3 d-flex flex-column align-items-center justify-content-center">
-              <i class="fa-solid fa-beat fa-code"></i>
-              <span class="network-name ml-5">Web development</span>
-            </span>
-          </div>
-          <h3>Let's bring your ideas to life!</h3>
-          <hr class="intro-divider" />
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <a name="about"></a>
-
-      <div class="container-fluid w-100 col-md-8 col-sm-6 col-xs-4" id="aboutMe">
-        <span class="text-center">About me</span>
-        <hr class="intro-divider" />
-        <p class="lead container-fluid w-100 col-lg-12 col-md-8 col-sm-6 col-xs-4">
-          I am an entry-level Frontend Developer with a solid foundation in
-          HTML, CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX
-          design, Figma and website building.<br />
-
-          Prior to pursuing a career in IT, I spent 21 years working as a
-          physiotherapist in a hospital setting. During this time, I developed
-          a strong work ethic, excellent communication skills, and the ability
-          to work under pressure while maintaining attention to detail as
-          individual as well as in team.<br />
-
-          My passion for website development grew while attending IT Academy
-          in Sarajevo, where I gained valuable hands-on experience using
-          industry-standard tools and techniques. I am eager to learn more and
-          continue to improve my skills as I embark on this exciting new
-          career path.<br />
-          As a developer, I am committed to creating high-quality,
-          user-friendly websites that provide the best possible experience for
-          the end user. I am a responsible and reliable individual who takes
-          pride in delivering work that exceeds expectations for contribution
-          of your project.
-        </p>
-      </div>
-    </section>
-    <a name="portfolio"></a>
-    <section id="portfolio" class="container-fluid">
-      <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4 text-center">
-        <h2 class="section-heading">
-          Below you'll find some of my recent work.
-        </h2>
-        <hr class="intro-divider" />
-        <ul class="cards">
-          <li class="card">
-            <a href="https://kilobyteguru.github.io/Black-Flag/" target="_blank" class="portfolio-link"
-              data-toggle="modal">
-              <h3 class="card-title">Games selling web store landing page</h3>
-              <div class="card-container">
-                <img src="pic/Screenshot 2023-05-19 at 05-35-23 BLACK FLAG online store for PC games.png"
-                  class="img-responsive" alt="" />
-              </div>
-              <div class="card-link-wrapper">
-                <p>HTML / CSS / JavaScript / SASS / Bootstrap</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://kilobyteguru.github.io/simple-credit-card/" target="_blank" class="portfolio-link"
-              data-toggle="modal">
-              <h3 class="card-title">Credit card checkout form</h3>
-              <div class="card-container">
-                <img src="pic/Screenshot 2023-05-19 at 14-33-29 CREDIT CARD CHECKOUT.png" class="img-responsive"
-                  alt="" />
-              </div>
-              <div class="card-link-wrapper">
-                <p>HTML / CSS / JavaScript / Bootstrap</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://kilobyteguru.github.io/memory-game/" target="_blank" class="portfolio-link"
-              data-toggle="modal">
-              <h3 class="card-title">Memory game</h3>
-              <div class="card-container">
-                <img src="pic/memory-screenshot.png" class="img-responsive" alt="" />
-              </div>
-              <div class="card-link-wrapper">
-                <p>JavaScript / CSS / HTML</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a href="https://kilobyteguru.github.io/simple-draw-app/" target="_blank" class="portfolio-link"
-              data-toggle="modal">
-              <h3 class="card-title">Simple drawing app</h3>
-              <div class="card-container">
-                <img src="pic/drawApp.png" class="img-responsive" alt="" />
-              </div>
-              <div class="card-link-wrapper">
-                <p>JavaScript / CSS / HTML</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <a name="contact"></a>
-
-    <div class="container-fluid col-lg-12 col-md-8 col-sm-6 col-xs-4">
-      <h2 class="section-heading">Contact me over</h2>
-      <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline d-flex justify-content-evenly">
-        <li>
-          <a href="https://www.facebook.com/Sinner211?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/alfa.gong.gong/"><i class="fa fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="https://github.com/kiloByteGuru"><i class="fa fa-github"></i></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/jasenko-bozinovic-9032b6175/"><i class="fa fa-linkedin"></i></a>
-        </li>
-      </ul>
-      <form id="my-form" action="https://formspree.io/f/mwkjjdzy" method="POST">
-        <label>Email:</label>
-        <input type="email" name="email" />
-        <label>Message:</label>
-        <input type="text" name="message" />
-        <button id="my-form-button">Submit</button>
-        <p id="my-form-status"></p>
-      </form>
-      <!-- Place this script at the end of the body tag -->
+  <nav class="nav">
+    <div class="burger">
+      <div class="burger__patty"></div>
     </div>
 
-    <!-- JavaScript Files -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!-- End JavaScript Files -->
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#1" class="nav__link c-blue"><i class="fa fa-home fa-lg"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#2" class="nav__link c-yellow scrolly"><i class="fa fa-user fa-lg"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#3" class="nav__link c-red"><i class="fa fa-code-fork fa-lg"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#4" class="nav__link c-green"><i class="fa fa-contact-card fa-lg"></i></a>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- /.banner -->
+  <section class="panel b-blue container-fluid" id="1">
+    <article class="panel__wrapper container">
+      <div class="panel__content">
+        <div class="home-content">
+          <div class="home-heading">
+            <h1>My name is Jasenko Božinović</h1>
+          </div>
+          <div class="right-image">
+          </div>
+          <div class="home-box-content">
+            <div class="left-text">
+              <h4>I am Front-end Web Developer</h4>
+              <p>I work with:</p>
+              <div class="programLanguage w-100 h-100">
+                <span class="ml-3 mr-5 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-brands fa-beat fa-html5"></i>
+                  <span class="network-name ml-5">HTML</span>
+                </span>
+                <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-brands fa-beat fa-css3"></i>
+                  <span class="network-name ml-5">CSS</span>
+                </span>
+                <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-brands fa-beat fa-js"></i>
+                  <span class="network-name ml-5">JavaScript/Typescript</span>
+                </span>
+                <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-brands fa-beat fa-bootstrap"></i>
+                  <span class="network-name ml-5">Bootsrap</span>
+                </span>
+                <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-brands fa-beat fa-sass"></i>
+                  <span class="network-name ml-5">SASS</span>
+                </span>
+                <span class="mr-5 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-brands fa-beat fa-figma"></i>
+                  <span class="network-name ml-5">Figma</span>
+                </span>
+                <span class="mr-3 d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa-solid fa-beat fa-code"></i>
+                  <span class="network-name ml-5">Web development</span>
+                </span>
+              </div>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <a href="#">
-              <p class="copyright text-muted small">
-                Copyright &copy; alfaGongGong
-              </p>
-            </a>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </article>
+  </section>
+  <section class="panel b-yellow container-fluid" id="2">
+    <article class="panel__wrapper container">
+      <div class="panel__content ">
+        <div class="about-content">
+          <div class="heading">
+            <h1>About me</h1>
+          </div>
 
-  <script src="portfolio.js" defer></script>
+          <div>
+            <div class="about-box-text">
+              <p id="aboutText">I am an entry-level Frontend Developer with a solid foundation in
+                HTML, CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX
+                design, Figma and website building.<br>
 
+                Prior to pursuing a career in IT, I spent 21 years working as a
+                physiotherapist in a hospital setting. During this time, I developed
+                a strong work ethic, excellent communication skills, and the ability
+                to work under pressure while maintaining attention to detail as
+                individual as well as in team.<br>
+
+                My passion for website development grew while attending IT Academy
+                in Sarajevo, where I gained valuable hands-on experience using
+                industry-standard tools and techniques. I am eager to learn more and
+                continue to improve my skills as I embark on this exciting new
+                career path.<br>
+                As a developer, I am committed to creating high-quality,
+                user-friendly websites that provide the best possible experience for
+                the end user. I am a responsible and reliable individual who takes
+                pride in delivering work that exceeds expectations for contribution
+                of your project.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="projects section-padding" id="3">
+    <div class="container">
+      <div class="row">
+
+
+
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <a href="https://kilobyteguru.github.io/Black-Flag/">
+            <div class="projects-thumb">
+              <div class="projects-info">
+
+                <h4 class="projects-title">E Commerce for PC games landing page</h4>
+              </div>
+
+                <img src="img/blackFlag.png" class="projects-image img-fluid" alt="">
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="projects-thumb">
+            <div class="projects-info">
+              <small class="projects-tag">Photography</small>
+
+              <h3 class="projects-title">The Watch</h3>
+            </div>
+
+            <a href="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="popup-image">
+              <img src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg" class="projects-image img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="projects-thumb">
+            <div class="projects-info">
+              <small class="projects-tag">Website</small>
+
+              <h3 class="projects-title">Polo</h3>
+            </div>
+
+            <a href="images/projects/true-agency-9Bjog5FZ-oc-unsplash.jpg" class="popup-image">
+              <img src="images/projects/true-agency-9Bjog5FZ-oc-unsplash.jpg" class="projects-image img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="panel b-green" id="4">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+        <div class="container">
+          <div class="row">
+            <div class="contact-content">
+              <div class="heading">
+                <h4>Contact us</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="contat-form">
+                    <form id="contact" action="" method="post">
+                      <fieldset>
+                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name"
+                          required="">
+                      </fieldset>
+                      <fieldset>
+                        <input name="email" type="email" class="form-control" id="email" placeholder="Email"
+                          required="">
+                      </fieldset>
+                      <fieldset>
+                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"
+                          required=""></textarea>
+                      </fieldset>
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="more-info">
+                    <p>Nunc purus ligula, ullamcorper id velit id, vestibulum auc sapien. Sed quis mauris eget sem
+                      imperdiet rhoncus.<br><br>
+                      <em>880 Etiam mauris erat,
+                        <br>Vestibulum eu augue nec, 10940</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="footer">
+              <p>Copyright © 2020 Your Company
+                | Design: TemplateMo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <script src="js/vendor/npm.js"></script>
+  <script type='text/javascript'>
+    $(document).ready(function () {
+      $("#news-slider").owlCarousel({
+        items: 3,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [980, 2],
+        itemsMobile: [600, 1],
+        navigation: true,
+        navigationText: ["", ""],
+        pagination: true,
+        autoPlay: true
+      });
+
+    });
+  </script>
 </body>
 
 </html>
