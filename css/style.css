@@ -207,6 +207,7 @@ panel {
   height: -moz-fit-content;
   height: -o-fit-content;
   height: -ms-fit-content;
+  widthh: 100%;
   flex-direction: column;
   background-color: rgba(1, 0, 0, 0.7490196078);
   color: #FFF8FE;
@@ -214,9 +215,8 @@ panel {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   max-height: -moz-max-content;
   max-height: max-content;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
+  
 }
 
 .panel__content {
@@ -269,7 +269,7 @@ p:last-child {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-width: 480px;
+  
   height: auto;
   height: -moz-fit-content;
   height: fit-content;
@@ -280,18 +280,26 @@ p:last-child {
 
 .b-blue {
   background-image: url(../img/first-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .projects {
   background-image: url(../img/second-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .b-green {
   background-image: url(../img/third-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .b-yellow {
   background-image: url(../img/fourth-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .programLanguage {
@@ -411,10 +419,10 @@ h1 {
   .about-box-content,
   .projects,
   .contact-content {
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     height: auto;
-    min-width: 80vw;
+    width: 100%;
     right: 0px;
     max-height: -moz-max-content;
     max-height: max-content;
@@ -480,7 +488,7 @@ p {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
-  margin: 15px;
+  margin: 20px;
 }
 
 /*dark*/
