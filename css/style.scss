@@ -1,10 +1,10 @@
-$hcolor:#262CFF;
-$backgroundOpaque:#010000bf;
-$color:#FFF8FE;
-$buttonBackground:#0a0880;
+$hcolor: #262CFF;
+$backgroundOpaque: #010000bf;
+$color: #FFF8FE;
+$buttonBackground: #0a0880;
 $colorHover: #010000;
-$buttonBackgroundHover:#262CFF;
-$borderColor:#FFF8FE;
+$buttonBackgroundHover: #262CFF;
+$borderColor: #FFF8FE;
 $mobile : 480px;
 $tablet : 768px;
 $laptop : 992px;
@@ -248,6 +248,7 @@ panel {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
 }
 
 .panel__content {
@@ -301,13 +302,11 @@ p:last-child {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-width: $mobile;
   height: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   max-height: max-content;
-  background-attachment: fixed;
 }
 
 .b-blue {
@@ -383,8 +382,7 @@ i.fa-brands.fa-beat.fa-code::before {
 .home-content,
 .about-content,
 .projects,
-.contact-content,
-.projects-thumb {
+.contact-panel {
   height: -moz-fit-content;
   height: fit-content;
   height: auto;
@@ -416,7 +414,9 @@ h1 {
 }
 
 .home-box-content,
-.about-box-content {
+.about-box-content,
+.contact-content,
+.projects-content {
   margin-top: 45px;
   background-color: $backgroundOpaque;
   color: $color;
