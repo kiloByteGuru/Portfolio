@@ -1,0 +1,29 @@
+@media screen and (max-width: 640px) {
+  .nav {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav__list {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .burger {
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width:$mobile) {
+  .burger__patty {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .burger--active .burger__patty {
+    transform: scale(0.8) rotate(90deg);
+  }
+}
