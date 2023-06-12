@@ -20,7 +20,6 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
 
 }
 
@@ -425,8 +424,7 @@ h1 {
 }
 
 .home-box-content,
-.about-box-content,
-.projects-content {
+.about-box-content {
   margin: 45px 20px 20px 20px;
   background-color: $backgroundOpaque;
   color: $color;
@@ -527,56 +525,68 @@ p {
 /*dark*/
 
 /* Section PROJECTS */
-
-.projects-thumb {
-  background: $backgroundOpaque;
-  border: 2px solid $borderColor;
-  border-radius: 25px;
-  position: relative;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  padding: 40px;
-  transition: all ease 0.5s;
+.projects-content {
+  height: -moz-fit-content;
+  height: fit-content;
+  height: -webkit-fit-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: start;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: whitesmoke 1px solid;
+  border-radius: 25px;
+  background-color: $backgroundOpaque;
+  color: $color;
+  padding: 30px;
+  margin: 30px;
+
 }
 
-.projects-thumb:hover {
-  border-color: var(--secondary-color);
+.work-thumb {
+  margin: 22px 0 12px 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 200px;
+  height: 200px;
+
 }
 
-.projects-thumb:hover,
-.projects-image,
-.projects-thumb:focus,
-.projects-image {
-  transform: rotate(0) translateY(0);
+.work-thumb img {
+  border-radius: 5px;
 }
 
-.projects-thumb,
-.popup-image {
-  display: block;
+.work-thumb h2 {
+  font-size: 25px;
+}
+
+.work-thumb-overlay {
+  position: absolute;
+  background: #7682cc;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
   width: 100%;
   height: 100%;
+  padding: 82px 42px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.projects-image {
-  display: block;
-  width: 100%;
-  transform: rotate(10deg) translateY(80px);
-  transition: all ease 0.5s;
-}
-
-.projects-title {
-  margin-bottom: 20px;
-}
-
-.projects-tag {
-  font-size: 25px;
-  font-weight: 300;
-  color: $color;
-  margin-bottom: 5px;
+.work-thumb:hover .work-thumb-overlay {
+  opacity: 1;
 }
 
 /* Contact section*/
