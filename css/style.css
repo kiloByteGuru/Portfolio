@@ -547,8 +547,8 @@ p {
   border-radius: 25px;
   border: #FFF8FE 1px solid;
   background-color: rgba(1, 0, 0, 0.4352941176);
-  padding: 0px 60px;
-  margin: 0 auto;
+  padding: 60px;
+  margin: 30px;
 }
 
 .contat-form {
