@@ -68,7 +68,8 @@ ul {
 
 /* dark*/
 
-.primary-button a:hover {
+.primary-button,
+a:hover {
   background-color: $buttonBackgroundHover;
   border: 1px solid $color;
   transition: all 0.2s linear;
@@ -269,7 +270,10 @@ h4 {
 
 @media screen and (min-width: $mobile) {
 
-  .b-blue .projects .b-green .b-yellow {
+  .b-blue,
+  .projects,
+  .b-green,
+  .b-yellow {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,11 +296,15 @@ h4 {
   opacity: 1;
 }
 
-.panel p:last-child {
+.panel,
+p:last-child {
   margin-bottom: 0px;
 }
 
-.b-blue .projects .b-green .b-yellow {
+.b-blue,
+.projects,
+.b-green,
+.b-yellow {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -377,7 +385,9 @@ i.fa-brands.fa-beat.fa-code::before {
 
 /* Section Home */
 
-.home-content .about-content .projects {
+.home-content,
+.about-content,
+.projects {
   height: -moz-fit-content;
   height: fit-content;
   height: auto;
@@ -408,7 +418,9 @@ h1 {
   font-weight: 300;
 }
 
-.home-box-content .about-box-content .projects-content {
+.home-box-content,
+.about-box-content,
+.projects-content {
   margin-top: 45px;
   background-color: $backgroundOpaque;
   color: $color;
@@ -430,7 +442,11 @@ h1 {
 
 @media screen and (min-width: $mobile) {
 
-  .home-content .home-box-content .about-content .about-box-content .projects {
+  .home-content,
+  .home-box-content,
+  .about-content,
+  .about-box-content,
+  .projects {
     margin: 10px;
     padding: 10px;
     height: auto;
@@ -531,12 +547,15 @@ p {
   border-color: var(--secondary-color);
 }
 
-.projects-thumb:hover .projects-image,
-.projects-thumb:focus .projects-image {
+.projects-thumb:hover,
+.projects-image,
+.projects-thumb:focus,
+.projects-image {
   transform: rotate(0) translateY(0);
 }
 
-.projects-thumb .popup-image {
+.projects-thumb,
+.popup-image {
   display: block;
   width: 100%;
   height: 100%;
@@ -576,11 +595,13 @@ p {
   margin: 0 auto;
 }
 
-.contact-content .heading {
+.contact-content,
+.heading {
   padding-top: 35%;
 }
 
-.contact-content .contat-form {
+.contact-content,
+.contat-form {
   background-color: $backgroundOpaque;
   border: $borderColor 1px solid;
   border-radius: 25px;
@@ -589,7 +610,7 @@ p {
   margin: 60px auto;
 }
 
-.contact-content input {
+input {
   margin-bottom: 20px;
   padding-left: 15px;
   width: 100%;
@@ -605,7 +626,7 @@ p {
   box-shadow: none;
 }
 
-.contact-content textarea {
+textarea {
   margin-bottom: 20px;
   padding-left: 15px;
   width: 100%;
@@ -623,7 +644,7 @@ p {
   box-shadow: none;
 }
 
-.contact-content button {
+button {
   display: inline-block;
   background-color: $buttonBackground;
   color: $color;
@@ -637,7 +658,7 @@ p {
   border-radius: 0px;
 }
 
-.contact-content button:hover {
+button:hover {
   background-color: $buttonBackgroundHover;
   border: 1px solid $borderColor;
   -moz-transition: all 0.2s linear;
@@ -650,17 +671,14 @@ p {
   text-align: center;
 }
 
-.footer p {
+.footer,
+p {
   padding: 20px 0px;
   color: $color;
   font-weight: 300;
 }
 
-.footer p em {
-  font-style: normal;
-  font-weight: 400;
-}
-
-.footer a {
+.footer,
+a {
   color: $color;
 }
