@@ -30,6 +30,7 @@ body {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -408,6 +409,8 @@ i.fa-brands.fa-beat.fa-code::before {
   color: $color;
   border-radius: 25px;
   border: $borderColor 1px solid;
+  margin: 30px;
+  padding: 30px;
 }
 
 .projects {
