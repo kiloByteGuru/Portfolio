@@ -9,12 +9,12 @@ $mobile : 480px;
 $tablet : 768px;
 $laptop : 992px;
 $desktop : 1200px;
-/* Color Theme Swatches in Hex */
+/* Color Theme Light */
 $Copy-of-Color-Theme-1-1-hex: #86B89A;
 $Copy-of-Color-Theme-1-2-hex: #FFB3A5;
 $Copy-of-Color-Theme-1-3-hex: #FF9785;
 $Copy-of-Color-Theme-1-4-hex: #FFD896;
-$Copy-of-Color-Theme-1-5-hex: #FBEEE0;
+$backgroundOpaqueLight: #FBEEE0;
 
 html {
   scroll-behavior: smooth;
@@ -482,11 +482,7 @@ h1 {
 
 /*dark*/
 
-p {
-  color: $color;
-  margin: 20px;
-  padding: 20px;
-}
+
 
 /*dark*/
 
