@@ -268,7 +268,7 @@ h4 {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (max-width: $mobile) {
 
   .b-blue,
   .projects,
@@ -288,6 +288,7 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    margin: 10px;
   }
 }
 
@@ -313,6 +314,7 @@ p:last-child {
   height: -moz-fit-content;
   height: fit-content;
   max-height: max-content;
+  margin: 10px;
 }
 
 .b-blue {
@@ -421,7 +423,7 @@ h1 {
 .home-box-content,
 .about-box-content,
 .projects-content {
-  margin-top: 45px;
+  margin: 45px 20px 20px 20px;
   background-color: $backgroundOpaque;
   color: $color;
   border-radius: 25px;
@@ -440,7 +442,7 @@ h1 {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (max-width: $mobile) {
 
   .home-content,
   .home-box-content,
@@ -543,10 +545,6 @@ p {
   justify-content: center;
 }
 
-.projects-thumb:hover {
-  border-color: var(--secondary-color);
-}
-
 .projects-thumb:hover,
 .projects-image,
 .projects-thumb:focus,
@@ -591,7 +589,6 @@ p {
   border: $borderColor 1px solid;
   background-color: $backgroundOpaque;
   padding: 0px 60px;
-  position: relative;
   margin: 0 auto;
 }
 
@@ -606,8 +603,7 @@ p {
   border: $borderColor 1px solid;
   border-radius: 25px;
   padding: 30px;
-  position: relative;
-  margin: 60px auto;
+  margin: 30px;
 }
 
 input {
@@ -669,16 +665,4 @@ button:hover {
 
 .footer {
   text-align: center;
-}
-
-.footer,
-p {
-  padding: 20px 0px;
-  color: $color;
-  font-weight: 300;
-}
-
-.footer,
-a {
-  color: $color;
 }
