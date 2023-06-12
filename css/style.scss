@@ -590,8 +590,8 @@ p {
   border-radius: 25px;
   border: $borderColor 1px solid;
   background-color: $backgroundOpaque;
-  padding: 0px 60px;
-  margin: 0 auto;
+  padding: 60px;
+  margin: 30px;
 }
 
 .contat-form {
@@ -680,6 +680,7 @@ textarea {
   color: $color;
   text-transform: none;
   text-decoration: none;
+
 }
 
 .soc-link:hover {
