@@ -1,4 +1,4 @@
-/* Color Theme Swatches in Hex */
+/* Color Theme Light */
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -444,12 +444,6 @@ h1 {
 }
 
 /*dark*/
-p {
-  color: #FFF8FE;
-  margin: 20px;
-  padding: 20px;
-}
-
 /*dark*/
 .right-image {
   width: 200px;
