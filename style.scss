@@ -1,0 +1,94 @@
+// Variables for colors
+$light-background: #f0f8ff;
+$light-text-color: #ff6600;
+$dark-background: #001f3f;
+$dark-text-color: #ff4136;
+
+// Variables for fonts
+$light-font-family: "Comic Sans MS", cursive;
+$dark-font-family: "Indie Flower", cursive;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+// Light Theme
+body.light {
+  background-color: $light-background;
+  color: $light-text-color;
+  font-family: $light-font-family;
+}
+
+// Dark Theme
+body.dark {
+  background-color: $dark-background;
+  color: $dark-text-color;
+  font-family: $dark-font-family;
+}
+
+// Switch for changing themes
+label.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+label.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+span.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+span.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + span.slider {
+  background-color: #2196f3;
+}
+
+input:checked + span.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+// Styles for "Back to Top" button
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#backToTopBtn:hover {
+  background-color: #0b7dda;
+}
