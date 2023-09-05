@@ -56,49 +56,25 @@ form.addEventListener('submit', (e) => {
 });
 ;
 // Scroll reveal animations
-const scroll = new ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  duration: 700,
-  reset: true
-});
-
-scroll.reveal('.feature', {
-  delay: 200
-});
-
-// Fade in hero text on load
-const myName = document.querySelector('#name-heading');
-
-myName.addEventListener('DOMContentLoaded', () => {
-  myName.classList.remove('className', 'hero-text');
-  myName.classList.add('className', 'loaded');
-});
-
-// Function to add fade-in animation when element is in view
-function animateOnScroll(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-active');
-      observer.unobserve(entry.target);
-    }
-  });
-}
 
 // Function to handle fade-in and fade-out animations
 function handleSectionVisibility(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-active');
+      entry.target.classList.add('animate__fadeInLeft');
       observer.unobserve(entry.target);
     } else {
-      entry.target.classList.remove('fade-in-active');
+      entry.target.classList.remove('animate__fadeInLeft');
+      entry.target.classList.add('animate__fadeOutRight');
+      observer.unobserve(entry.target);
+
     }
+
   });
+
 }
 
-// Observe elements with class 'fade-in'
-const fadeElements = document.querySelectorAll('.fade-in');
+const fadeElements = document.querySelectorAll('.animated');
 const fadeObserver = new IntersectionObserver(animateOnScroll, {
   threshold: 0.5
 });
