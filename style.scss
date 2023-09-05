@@ -87,7 +87,6 @@ input:checked + span.slider:before {
 }
 
 nav {
-  background-color: #333;
   ul.navbar-nav {
     list-style: none;
     padding: 0;
@@ -114,6 +113,24 @@ nav {
         }
       }
     }
+  }
+}
+.navbar-toggler {
+  border: none;
+  color: #fff;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: none;
+  }
+  &:hover {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: none;
+    color: #ff5500;
+    transition: color 0.3s ease;
   }
 }
 
