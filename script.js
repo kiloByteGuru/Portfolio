@@ -12,6 +12,7 @@ document.addEventListener("scroll", () => {
 });
 //back to top btn
 const backToTopBtn = document.querySelector("#backToTopBtn");
+const btnContainer = document.querySelector("#btn-container");
 
 const backToTop = () => {
   window.addEventListener("scroll", () => {
@@ -22,10 +23,11 @@ const backToTop = () => {
       backToTopBtn.classList.remove('d-block');
       backToTopBtn.classList.add('d-none');
     }
+
   });
 
   backToTopBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0;
+    window.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
 };

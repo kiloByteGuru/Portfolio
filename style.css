@@ -1,3 +1,10 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url("./img/background.svg");
   background-size: auto;
@@ -70,17 +77,18 @@ input:checked + span.slider:before {
 }
 
 #backToTopBtn {
+  height: 50px;
+  width: 50px;
   position: fixed;
-  top: 20px;
+  top: 80vh;
   right: 20px;
-  z-index: 99;
   border: none;
   outline: none;
+  border-radius: 50%;
   background-color: #2196f3;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
+  font-size: 20px;
 }
 
 nav ul.navbar-nav {
