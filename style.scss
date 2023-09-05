@@ -8,7 +8,6 @@ $dark-text-color: #ff4136;
 $light-font-family: "Comic Sans MS", cursive;
 $dark-font-family: "Indie Flower", cursive;
 
-@import "node_modules/bootstrap/scss/bootstrap.scss";
 // Light Theme
 body.light {
   background-color: $light-background;
@@ -73,9 +72,7 @@ input:checked + span.slider:before {
   transform: translateX(26px);
 }
 
-// Styles for "Back to Top" button
 #backToTopBtn {
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -89,6 +86,232 @@ input:checked + span.slider:before {
   border-radius: 50%;
 }
 
-#backToTopBtn:hover {
-  background-color: #0b7dda;
+nav {
+  background-color: #333;
+  ul.navbar-nav {
+    list-style: none;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: #ff6600;
+        }
+      }
+    }
+  }
+}
+nav {
+  ul.navbar-nav {
+    li {
+      a {
+        transition: color 0.3s ease;
+        &:hover {
+          color: #ff5500;
+        }
+      }
+    }
+  }
+}
+
+// Stil za hero sekciju
+.section.hero {
+  padding: 100px 0;
+  text-align: center;
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    color: #777;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .technologies {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      margin: 10px;
+      i {
+        font-size: 24px;
+        margin-right: 10px;
+        &.fab {
+          color: #ff6600;
+        }
+      }
+    }
+  }
+}
+
+// Stil za sekciju "My Projects"
+.section#projects {
+  padding: 100px 0;
+  h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .row {
+    .col-md-4 {
+      .card.project {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+        h3 {
+          font-size: 24px;
+          margin-top: 20px;
+        }
+        p {
+          font-size: 18px;
+          margin-top: 10px;
+          color: #777;
+        }
+        a {
+          display: block;
+          margin-top: 20px;
+          text-decoration: none;
+          color: #ff6600;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Stil za sekciju "Contact"
+.section#contact {
+  padding: 100px 0;
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    form {
+      fieldset {
+        margin-bottom: 20px;
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        textarea {
+          resize: vertical;
+        }
+      }
+      button {
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #ff5500;
+        }
+      }
+    }
+  }
+}
+
+// Stil za footer
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  .container {
+    .row {
+      display: flex;
+      align-items: center;
+      .footer {
+        display: flex;
+        align-items: center;
+        .soc-link {
+          font-size: 24px;
+          margin-right: 20px;
+          color: white;
+          &:hover {
+            color: #ff6600;
+          }
+        }
+      }
+      .copyright {
+        flex-grow: 1;
+        text-align: right;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.section#projects {
+  .row {
+    .col-md-4 {
+      .card.project {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &.fade-in-active {
+    opacity: 1;
+  }
+}
+
+.thankyou_message {
+  display: none;
+  text-align: center;
+  h4 {
+    font-size: 24px;
+    color: #ff6600;
+  }
+}
+
+#backToTopBtn {
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #ff5500;
+  }
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
+}
+
+body.auto-theme-transition {
+  transition: background-color 5s linear, color 5s linear, font-family 5s linear;
 }

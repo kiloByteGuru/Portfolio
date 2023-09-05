@@ -1,8 +1,5 @@
-import 'animate.css';
 
-import ScrollReveal from 'scrollreveal';
-import 'bootstrap/dist/js/bootstrap';
-window.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
   const projects = document.querySelectorAll(".card.project");
   projects.forEach((project) => {
     const projectPosition = project.getBoundingClientRect().top;
@@ -13,20 +10,40 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+//back to top btn
+const backToTopBtn = document.querySelector("#backToTopBtn");
 
-const backToTopBtn = document.getElementById("backToTopBtn");
+const backToTop = () => {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      backToTopBtn.classList.remove('d-none');
+      backToTopBtn.classList.add('d-block');
+    } else {
+      backToTopBtn.classList.remove('d-block');
+      backToTopBtn.classList.add('d-none');
+    }
+  });
 
-window.addEventListener("scroll", () => {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
+  backToTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+};
 
-backToTopBtn.addEventListener("click", () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+// Poziv funkcije za "Back to Top" dugme
+backToTop();
+//smooth scrolling
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    document.querySelector(target).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
 
 const form = document.querySelector('.contact-form');
