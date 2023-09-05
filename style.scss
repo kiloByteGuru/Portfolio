@@ -7,6 +7,7 @@ $dark-text-color: #ff4136;
 // Variables for fonts
 $light-font-family: "Comic Sans MS", cursive;
 $dark-font-family: "Indie Flower", cursive;
+
 body {
   background-image: url("./img/background.svg");
   background-size: auto;
@@ -85,8 +86,8 @@ input:checked + span.slider:before {
 
 #backToTopBtn {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;
@@ -351,9 +352,11 @@ section {
         text-align: center;
         padding: 20px;
         margin-bottom: 30px;
+        height: 80%;
+
         img {
           max-width: 100%;
-          height: auto;
+          height: 50%;
         }
         h3 {
           font-size: 24px;
@@ -370,7 +373,7 @@ section {
           text-decoration: none;
           color: #ff6600;
           &:hover {
-            text-decoration: underline;
+            text-decoration: none;
           }
         }
       }

@@ -71,8 +71,8 @@ input:checked + span.slider:before {
 
 #backToTopBtn {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;
@@ -294,10 +294,11 @@ section p {
   text-align: center;
   padding: 20px;
   margin-bottom: 30px;
+  height: 80%;
 }
 .section#projects .row .col-md-4 .card.project img {
   max-width: 100%;
-  height: auto;
+  height: 50%;
 }
 .section#projects .row .col-md-4 .card.project h3 {
   font-size: 24px;
@@ -315,7 +316,7 @@ section p {
   color: #ff6600;
 }
 .section#projects .row .col-md-4 .card.project a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .section#contact {
