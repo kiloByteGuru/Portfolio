@@ -34,15 +34,13 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="light">
+  <body class="dark">
    
-    <button id="backToTopBtn" class="d-none" type="button" >
-      <i class="fas fa-arrow-up"></i>
-    </button>
+   
 
     <nav class="navbar navbar-collapse navbar-left mb-3">
       <button
-        class="navbar-toggler animate__animated animate__pulse"
+        class="navbar-toggler "
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -50,7 +48,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span><i class="fas fa-bars"></i></span>
+        <span><i class="fas fa-bars animate__animated animate__pulse"></i></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
@@ -65,7 +63,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#work"
+            <a class="nav-link" href="#projects"
               ><i class="fas fa-briefcase"></i> Projects</a
             >
           </li>
@@ -80,7 +78,7 @@
             >
           </li>
           <li class="nav-item">
-            <p>Switch theme</p><i class="fas fa-moon "></i>
+            <p>Switch to light theme</p><i class="fas fa-moon "></i>
   <label class="switch">
               <input type="checkbox" id="themeSwitch" />
               <span class="slider"></span>
@@ -89,28 +87,34 @@
         </ul>
       </div>
     </nav>
-
+<div class="d-none" id="buttonContainer">
+  <button id="backToTopBtn"  type="button" >
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</div>
    
     <!-- Home Section-->
-    <section class="hero section animated animate__animated" id="home">
+    <section class="hero section  animate__animated  hidden" id="home">
       <div class="container">
-        <h1 id="name-heading" class="hero-text">
-          My name is
-          <span class="animate__animated animate__jackInTheBox">Jasenko Bo&#382;inovi&#263</span>
+        <h1 id="name-heading" class="hero-text animate__animated animate__jackInTheBox">
+          My name is Jasenko Bo&#382;inovi&#263
         </h1>
+        <div class="row">
+          <div class="col-md-6">
+       
         <div class="hero-img">
           <img src="./img/profilna.jpg" alt="Profile pic">
         </div>
         <p>I am a Front-end Web Developer. I work with:</p>
         <ul class="list-unstyled technologies">
           <li><i class="fab fa-html5 animate__animated animate__wobble"></i> HTML</li>
-          <li><i class="fab fa-css3-alt animate__wobble"></i> CSS / Bulma CSS / Animate</li>
+          <li><i class="fab fa-css3-alt animate__wobble"></i> CSS / Bulma CSS / Animate CSS</li>
           <li><i class="fab fa-js animate__wobble"></i> JavaScript</li>
           <li><i class="fab fa-bootstrap animate__wobble"></i> Bootstrap</li>
-          <li><i class="fab fa-sass animate__wobble"></i> SASS</li>
+          <li><i class="fab fa-sass animate__wobble"></i> SASS / LESS / SCSS</li>
           <li><i class="fab fa-node-js animate__wobble"></i> Node JS</li>
           <li>
-            <i class="fab fa-database animate__wobble"></i> MySql DB / Maria DB
+            <i class="fas fa-database animate__wobble"></i>SQL / MySql DB / Maria DB
           </li>
           <li><i class="fab fa-react animate__wobble"></i> React</li>
           <li><i class="fab fa-figma animate__wobble"></i> Figma</li>
@@ -118,7 +122,8 @@
         
         </ul>
       </div>
-      <p class="mt-5 mb-5" id="aboutText">
+      <div class="col-md-6">
+      <p class="mt-5 mb-5" id="about">
         I am an entry-level Frontend Developer with a solid foundation in HTML,
         CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX design,
         Figma and website building. <br />Prior to pursuing a career in IT, I
@@ -136,6 +141,9 @@
         delivering work that exceeds expectations for contribution of your
         project.
       </p>
+      </div>
+        </div>
+      </div>
     </section>
 
     <section class=" section animated animate__animated" id="projects">

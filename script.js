@@ -12,7 +12,6 @@ document.addEventListener("scroll", () => {
 });
 //back to top btn
 const backToTopBtn = document.querySelector("#backToTopBtn");
-const btnContainer = document.querySelector("#btn-container");
 
 const backToTop = () => {
   window.addEventListener("scroll", () => {
@@ -56,55 +55,19 @@ form.addEventListener('submit', (e) => {
   form.style.display = 'none';
   thankYouMessage.style.display = 'block';
 });
-;
-// Scroll reveal animations
 
-// Function to handle fade-in and fade-out animations
-function handleSectionVisibility(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate__fadeInLeft');
-      observer.unobserve(entry.target);
-    } else {
-      entry.target.classList.remove('animate__fadeInLeft');
-      entry.target.classList.add('animate__fadeOutRight');
-      observer.unobserve(entry.target);
+// home section load with delay 
 
-    }
+const section = document.querySelector(".hero");
 
-  });
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    section.classList.remove("hidden");
+    section.classList.add("animate__fadeInLeft");
+  }, 2000);
 
-}
-
-const fadeElements = document.querySelectorAll('.animated');
-const fadeObserver = new IntersectionObserver(animateOnScroll, {
-  threshold: 0.5
 });
 
-fadeElements.forEach(element => {
-  fadeObserver.observe(element);
-});
+// sections reveal when scrolling down
 
-// Observe sections for fade-in and fade-out animations
-const sections = document.querySelectorAll('section');
-const sectionObserver = new IntersectionObserver(handleSectionVisibility, {
-  threshold: 0.5
-});
-
-sections.forEach(section => {
-  sectionObserver.observe(section);
-});
-
-const themeSwitch = document.getElementById("themeSwitch");
-
-themeSwitch.addEventListener("change", () => {
-  if (themeSwitch.checked) {
-    // Aktiviraj tamnu temu
-    document.body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    // Aktiviraj svjetlu temu
-    document.body.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
-});
+const sections = document.querySelectorAll(".section-animate");
