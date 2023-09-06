@@ -68,6 +68,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// show resume section on click
+
+const resumeBtn = document.querySelector("#resume-link");
+const hideCv = document.querySelector("#resume-close");
+
+resumeBtn.addEventListener("click", () => {
+  const resumeSection = document.querySelector("#resume");
+  resumeSection.classList.remove("hidden");
+  resumeSection.classList.add("animate__fadeInLeft");
+});
+
+hideCv.addEventListener("click", () => {
+  const resumeSection = document.querySelector("#resume");
+  resumeSection.classList.remove("animate__fadeInLeft");
+  resumeSection.classList.add("animate__fadeOutRight");
+  resumeSection.classList.add("hidden");
+});
+
 // sections reveal when scrolling down
 
 const sections = document.querySelectorAll(".section-animate");

@@ -54,16 +54,19 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="#home"
+            target="#home"
               ><i class="fas fa-home"></i> Home</a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about"
+            target="about"
               ><i class="fas fa-info-circle"></i> About</a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects"
+            target="#projects"
               ><i class="fas fa-briefcase"></i> Projects</a
             >
           </li>
@@ -123,82 +126,120 @@
         </ul>
       </div>
       <div class="col-md-6">
-      <p class="mt-5 mb-5" id="about">
-        I am an entry-level Frontend Developer with a solid foundation in HTML,
-        CSS, SASS, Bootstrap, vanilla JavaScript, TypeScript, UI/UX design,
-        Figma and website building. <br />Prior to pursuing a career in IT, I
-        spent 21 years working as a physiotherapist in a hospital setting.
-        During this time, I developed a strong work ethic, excellent
+        <h2>About me</h2>
+      <p  id="about">
+        I am <strong>Frontend Developer </strong>from Sarajevo, Bosnia and Herzegovina. <br />Prior to pursuing a career in web development, I've been working  as a physiotherapist in a hospital setting for 22 years, and developed a strong work ethic, excellent
         communication skills, and the ability to work under pressure while
-        maintaining attention to detail as individual as well as in team.
-        <br />My passion for website development grew while attending IT Academy
+        maintaining attention to detail, as individual, but also as a team member
+        <br />My passion for website development and programing has grew while attending IT Academy
         in Sarajevo, where I gained valuable hands-on experience using
         industry-standard tools and techniques. I am eager to learn more and
         continue to improve my skills as I embark on this exciting new career
         path. <br />As a developer, I am committed to creating high-quality,
-        user-friendly websites that provide the best possible experience for the
+        user-friendly, responsive, and aestethical  websites that provide the best possible experience for the
         end user. I am a responsible and reliable individual who takes pride in
         delivering work that exceeds expectations for contribution of your
-        project.
+        project.<br>If you are interested in more details about me, you can check out my <a href="#resume" id="resume-link" class="resume-link" type="button"  onclick="showCv()">resume here</a>.
       </p>
       </div>
         </div>
       </div>
     </section>
 
-    <section class=" section animated animate__animated" id="projects">
+    <!-- Resume Section-->
+    <section class="hidden section animate__animated" id="resume">
       <div class="container">
-        <h2>My Projects</h2>
+        <button type="button" id="resume-close"><i class="fas fa-close mr-4"></i>Close</button>
         <div class="row">
-          <!-- Projekti idu ovde -->
+          <div class="col-md-12">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+            <embed src="cv/Jasenko Božinoviæ CV.pdf" type="application/pdf">
+             </embed>
+            </div>
+              <a href="cv/Jasenko Božinoviæ CV.pdf" target="_blank"
+              download="Jasenko Božinoviæ CV.pdf" class="download-link"
+                ><i class="fas fa-download"></i> Download Resume</a
+              >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class=" section section-animate animate__animated" id="projects">
+      <h2>My Projects</h2>
+
+      <div class="container">
+        <div class="row">
           <div class="col-md-4 section">
             <div class="card project">
               <img alt="Black Flag Project" src="img/blackflag.png" />
               <h3>Black Flag</h3>
-              <p>Ecommerce website for gaming products.</p>
+              <p>Webstore for games (hard coded)</p>
               <a href="#" class="btn btn-primary project-btn">View Project</a>
             </div>
           </div>
           <div class="col-md-4 section">
             <div class="card project">
-              <img alt="Connect-4-web-app" src="img/connect4.png" />
-              <h3>Connect-4</h3>
-              <p>Web application for Connect-4 game.</p>
+              <img alt="Connect 4" src="img/connect4.png" />
+              <h3>Connect 4</h3>
+              <p>Connect 4 game</p>
               <a href="#" class="btn btn-primary project-btn">View Project</a>
             </div>
           </div>
           <div class="col-md-4 section">
             <div class="card project">
-              <img alt="Memory Game" src="img/memory.png" />
-              <h3>Memory Game</h3>
-              <p>Memory game web application</p>
-              <a href="#" class="btn btn-primary project-btn">View Project</a>
-            </div>
-          </div>
-          <div class="col-md-4 section">
-            <div class="card project">
-              <img alt="Credit Card Project" src="img/creditcard.png" />
+              <img alt="Credit Card" src="img/creditcard.png" />
               <h3>Credit Card</h3>
-              <p>Form in Credit Card shape</p>
+              <p>Credit Card fill form</p>
               <a href="#" class="btn btn-primary project-btn">View Project</a>
             </div>
           </div>
-          <div class="col-md-4 ">
-            <div class="card project">
-              <img alt="Digital Clock Project" src="img/digital-clock.png" />
-              <h3>Digital Clock</h3>
-              <p>JavaScript exercise in Digital Clock form</p>
-              <a href="#" class="btn btn-primary project-btn">View Project</a>
-            </div>
           </div>
-          <!-- Announcement for more projects -->
+          </div>
+          <div class="container">
+          <div class="row">
           <div class="col-md-4 section">
-            <span id="announcement">More projects coming soon</span>
+            <div class="card project">
+              <img alt="Digital Clock" src="img/digital-clock.png" />
+              <h3>Digital Clock</h3>
+              <p>Digital Clock from scratch vanilla JS exscercise</p>
+              <a href="#" class="btn btn-primary project-btn">View Project</a>
+            </div>
           </div>
-          <!-- Ostali projekti idu ovde -->
+          <div class="col-md-4 section">
+            <div class="card project">
+              <img alt="Product Card" src="img/product-card.png" />
+              <h3>Product Card</h3>
+              <p>Product card from scratch</p>
+              <a href="#" class="btn btn-primary project-btn">View Project</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 section">
+            <div class="card project">
+              <img alt="Under Construction" src="img/barrier_2334265 (1).png" />
+              <h3>Under Construction</h3>
+              <p>More projects coming soon</p>
+              <a href="#" class="btn btn-primary project-btn">View Project</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 section">
+              <div class="card project">
+                <img alt="Under Construction" src="img/barrier_2334265 (1).png" />
+                <h3>Under Construction</h3>
+                <p>More projects coming soon</p>
+                <a href="#" class="btn btn-primary project-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </section>
 
     <section class="section" id="contact">
       <article class="contact-form">
