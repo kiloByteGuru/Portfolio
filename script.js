@@ -33,6 +33,7 @@ const backToTop = () => {
 
 // Poziv funkcije za "Back to Top" dugme
 backToTop();
+
 //smooth scrolling
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -64,7 +65,7 @@ window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     section.classList.remove("hidden");
     section.classList.add("animate__fadeInLeft");
-  }, 2000);
+  }, 500);
 
 });
 
