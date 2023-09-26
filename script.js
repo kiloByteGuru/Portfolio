@@ -72,6 +72,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+
+// Function to toggle the theme and save preference to local storage
+function toggleTheme() {
+  const body = document.body;
+  const themeToggle = document.querySelector('#themeToggle');
+  const isDarkTheme = body.classList.contains('dark');
+
+  // Toggle the 'light' and 'dark' classes on the body element
+  body.classList.toggle('light');
+  body.classList.toggle('dark');
+
+  // Update theme preference in local storage
+  localStorage.setItem('themePreference', isDarkTheme ? 'light' : 'dark');
+}
+
+// Add an event listener to the theme toggle switch
+const themeToggle = document.querySelector('#themeToggle');
+themeToggle.addEventListener('change', toggleTheme);
+
+// Check local storage for theme preference and apply it
+const savedTheme = localStorage.getItem('themePreference');
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+} else {
+  document.body.classList.remove('dark');
+}
   // Add event listeners
   backToTop();
   navLinks.forEach((navLink) => {
