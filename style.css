@@ -10,7 +10,7 @@
   --background-image: url("./img/background.svg");
 }
 
-html, body {
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -115,8 +115,7 @@ input:checked + span.slider:before {
   border: none;
   outline: none;
   border-radius: 50%;
-  background-color: #2196f3;
-  color: white;
+  
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s ease;
@@ -134,17 +133,17 @@ nav ul.navbar-nav li {
 
 nav ul.navbar-nav li a {
   text-decoration: none;
-  color: white;
+  
 }
 
 nav ul.navbar-nav li a:hover {
-  color: #ff6600;
+  
 }
 
 .navbar-toggler {
   border: none;
-  color: #777;
-  background-color: transparent;
+  
+  
   outline: none;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px;
 }
@@ -172,12 +171,12 @@ section h2 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #ff5500;
+  
 }
 
 section p {
   font-size: 1.25rem;
-  color: #777;
+  
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -191,7 +190,7 @@ section p {
 
 .hero p {
   font-size: 18px;
-  color: #777;
+  
   max-width: 800px;
   margin: 0 auto;
   text-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
@@ -215,7 +214,7 @@ section p {
 }
 
 .hero .technologies li i.fab {
-  color: #ff6600;
+  
 }
 
 .hero-text {
@@ -262,8 +261,7 @@ section p {
 #resume-link,
 #resume-close {
   text-decoration: none;
-  color: #FF1493;
-  background-color: #4B0082;
+ 
 }
 
 #resume-link:hover,
@@ -320,8 +318,8 @@ section p {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  background-color: #ff6600;
-  color: white;
+  
+  
   font-size: 1.25rem;
 }
 
@@ -442,14 +440,14 @@ section p {
 .section#projects .row .col-md-4 .card.project p {
   font-size: 18px;
   margin-top: 10px;
-  color: #777;
+  
 }
 
 .section#projects .row .col-md-4 .card.project a {
   display: block;
   margin-top: 20px;
   text-decoration: none;
-  color: #ff6600;
+  
 }
 
 .section#projects .row .col-md-4 .card.project a:hover {
@@ -464,7 +462,7 @@ section p {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -495,7 +493,7 @@ section p {
 }
 
 .section#contact .contact-form form button {
-  background-color: #ff6600;
+  
   color: white;
   border: none;
   padding: 10px 20px;
@@ -522,7 +520,7 @@ footer .container .row {
 footer .container .row .footer .soc-link {
   font-size: 24px;
   margin-right: 20px;
-  color: white;
+  
 }
 
 footer .container .row .copyright {
