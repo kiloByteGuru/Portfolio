@@ -1,49 +1,50 @@
-$light-background: #f0f8ff;
-$light-text-color: #ff6600;
-$dark-background: #001f3f;
-$dark-text-color: #ff4136;
+// Variables
+$light-background: #FFD700; // Vibrant Gold
+$light-text-color: #FF1493; // Deep Pink
+$dark-background: #4B0082; // Indigo
+$dark-text-color: #00FF00; // Lime Green
 
-$light-font-family: "Comic Sans MS", cursive;
-$dark-font-family: "Indie Flower", cursive;
+$light-font-family: "Poppins", sans-serif; // Modern Sans-serif
+$dark-font-family: "Montserrat", sans-serif; // Cool Sans-serif
 
-:root {
-  width: 100%;
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
+// Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-image: url("./img/background.svg");
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center;
-  background-blend-mode: soft-light;
-  backdrop-filter: opacity(0.7);
+    font-family: $light-font-family;
+    background-image: url("./img/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: soft-light;
+    backdrop-filter: opacity(0.7);
 }
 
 // Light Theme
 .light {
-  background-color: $light-background;
-  color: $light-text-color;
-  font-family: $light-font-family;
-  transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
+    background-color: $light-background;
+    color: $light-text-color;
+    font-family: $light-font-family;
+    transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
 }
 
 // Dark Theme
 .dark {
-  background-color: $dark-background;
-  color: $dark-text-color;
-  font-family: $dark-font-family;
-  transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
+    background-color: $dark-background;
+    color: $dark-text-color;
+    font-family: $dark-font-family;
+    transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
 }
 
 // Switch for changing themes
@@ -115,34 +116,24 @@ input:checked + span.slider:before {
   }
 }
 nav {
-  ul.navbar-nav {
-    list-style: none;
-    padding: 0;
-    li {
-      display: inline-block;
-      margin-right: 20px;
-      a {
-        text-decoration: none;
-        color: white;
-        &:hover {
-          color: #ff6600;
+    ul.navbar-nav {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: #ff6600;
+                }
+            }
         }
-      }
     }
-  }
 }
-nav {
-  ul.navbar-nav {
-    li {
-      a {
-        transition: color 0.3s ease;
-        &:hover {
-          color: #ff5500;
-        }
-      }
-    }
-  }
-}
+
+
 .navbar-toggler {
   border: none;
   color: #777;
