@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to toggle the theme and save preference to local storage
 function toggleTheme() {
   const body = document.body;
-  const themeToggle = document.querySelector('#themeToggle');
+  const themeToggle = document.getElementById('themeToggle');
   const isDarkTheme = body.classList.contains('dark');
 
   // Toggle the 'light' and 'dark' classes on the body element
@@ -88,7 +88,7 @@ function toggleTheme() {
 }
 
 // Add an event listener to the theme toggle switch
-const themeToggle = document.querySelector('#themeToggle');
+const themeToggle = document.getElementById('themeToggle');
 themeToggle.addEventListener('change', toggleTheme);
 
 // Check local storage for theme preference and apply it
