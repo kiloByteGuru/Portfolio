@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const projects = document.querySelectorAll(".card.project");
-  const backToTopBtn = document.querySelector("#backToTopBtn");
+  const projects = document.querySelectorAll(".card-project");
+  const backToTopBtn = document.getElementById("backToTopBtn");
   const navLinks = document.querySelectorAll(".nav-link");
   const form = document.querySelector('.contact-form');
   const thankYouMessage = document.querySelector('.thankyou_message');
   const section = document.querySelector(".hero");
-  const resumeBtn = document.querySelector("#resume-link");
-  const hideCv = document.querySelector("#resume-close");
+  const resumeBtn = document.getElementById("resume-link");
+  const hideCv = document.getElementById("resume-close");
   const sections = document.querySelectorAll(".section-animate");
 
   // Function to handle the "Back to Top" button
@@ -49,22 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const screenPosition = window.innerHeight / 1.3;
 
       if (sectionPosition < screenPosition) {
-        section.classList.add("animate__fadeInUp");
+        section.classList.add("animate__fadeInLeft");
       }
     });
   };
 
-  // Function to reveal the home section with a delay
-  const revealHomeSection = () => {
-    setTimeout(() => {
-      section.classList.remove("hidden");
-      section.classList.add("animate__fadeInLeft");
-    }, 2000);
-  };
+  
 
   // Function to show and hide the resume section
   const toggleResumeSection = () => {
-    const resumeSection = document.querySelector("#resume");
+    const resumeSection = document.getElementById("resume");
 
     resumeBtn.addEventListener("click", () => {
       resumeSection.classList.remove("hidden");
