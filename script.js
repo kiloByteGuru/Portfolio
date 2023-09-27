@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const projects = document.getElementsByClassName("card-project");
+  const projects = document.getElementsByClassName("project");
   const backToTopBtn = document.getElementById("backToTopBtn");
   const navLinks = document.getElementsByClassName("nav-link");
-  const form = document.getElementsByClassName('contact-form');
-  const thankYouMessage = document.getElementsByClassName('thankyou_message');
-  const section = document.querySelector(".hero");
+
+  const form = document.getElementsByClassName("contact-form");
+  const thankYouMessage = document.getElementsByClassName("thankyou_message");
+  const section = document.getElementsByClassName("hero");
   const resumeBtn = document.getElementById("resume-link");
   const hideCv = document.getElementById("resume-close");
   const sections = document.getElementsByClassName("section-animate");
