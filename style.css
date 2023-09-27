@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
@@ -19,18 +18,6 @@ html {
   margin: 0;
   padding: 0;
 
-=======
-:root {
-  --light-bg-color: #FFD700;
-  --light-text-color: #FF1493;
-  --light-font-family: "Poppins", sans-serif;
-
-  --dark-bg-color: #4B0082;
-  --dark-text-color: #00FF00;
-  --dark-font-family: "Montserrat", sans-serif;
-
-  --background-image: url("./img/background.svg");
->>>>>>> d6290cabc4a1918f89f9f34a1646abb0de5d62bd
 }
 
 body {
@@ -38,17 +25,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   background-image: url("./img/bacground-light.svg");
-=======
-  background-image: var(--background-image);
->>>>>>> d6290cabc4a1918f89f9f34a1646abb0de5d62bd
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: soft-light;
   backdrop-filter: opacity(0.7);
-<<<<<<< HEAD
   font-family: "Poppins", sans-serif;
   transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
   min-height: 100vh;
@@ -78,27 +60,6 @@ body.dark {
   background-blend-mode: soft-light;
   backdrop-filter: opacity(0.7);
 
-=======
-  font-family: var(--light-font-family); /* Default to light theme */
-  transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
-}
-
-body {
-  min-height: 100vh; /* Ensure the body covers the viewport height */
-}
-
-/* Define light and dark theme styles */
-.light {
-  --bg-color: var(--light-bg-color);
-  --text-color: var(--light-text-color);
-  --font-family: var(--light-font-family);
-}
-
-.dark {
-  --bg-color: var(--dark-bg-color);
-  --text-color: var(--dark-text-color);
-  --font-family: var(--dark-font-family);
->>>>>>> d6290cabc4a1918f89f9f34a1646abb0de5d62bd
 }
 
 body.light {
@@ -112,9 +73,6 @@ body.dark {
   color: var(--text-color);
   font-family: var(--font-family);
 }
-
-
-
 
 label.switch {
   position: relative;
@@ -156,11 +114,11 @@ span.slider:before {
   border-radius: 50%;
 }
 
-input:checked + span.slider {
+input:checked+span.slider {
   background-color: #2196f3;
 }
 
-input:checked + span.slider:before {
+input:checked+span.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -175,7 +133,7 @@ input:checked + span.slider:before {
   border: none;
   outline: none;
   border-radius: 50%;
-  
+
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s ease;
@@ -193,17 +151,14 @@ nav ul.navbar-nav li {
 
 nav ul.navbar-nav li a {
   text-decoration: none;
-  
+
 }
 
-nav ul.navbar-nav li a:hover {
-  
-}
+nav ul.navbar-nav li a:hover {}
 
 .navbar-toggler {
   border: none;
-  
-  
+
   outline: none;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px;
 }
@@ -231,12 +186,12 @@ section h2 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
-  
+
 }
 
 section p {
   font-size: 1.25rem;
-  
+
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -250,7 +205,7 @@ section p {
 
 .hero p {
   font-size: 18px;
-  
+
   max-width: 800px;
   margin: 0 auto;
   text-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
@@ -273,9 +228,7 @@ section p {
   margin-right: 10px;
 }
 
-.hero .technologies li i.fab {
-  
-}
+.hero .technologies li i.fab {}
 
 .hero-text {
   font-size: 2rem;
@@ -321,7 +274,7 @@ section p {
 #resume-link,
 #resume-close {
   text-decoration: none;
- 
+
 }
 
 #resume-link:hover,
@@ -378,8 +331,7 @@ section p {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  
-  
+
   font-size: 1.25rem;
 }
 
@@ -500,14 +452,14 @@ section p {
 .section#projects .row .col-md-4 .card.project p {
   font-size: 18px;
   margin-top: 10px;
-  
+
 }
 
 .section#projects .row .col-md-4 .card.project a {
   display: block;
   margin-top: 20px;
   text-decoration: none;
-  
+
 }
 
 .section#projects .row .col-md-4 .card.project a:hover {
@@ -522,7 +474,7 @@ section p {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  
+
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -553,7 +505,7 @@ section p {
 }
 
 .section#contact .contact-form form button {
-  
+
   color: white;
   border: none;
   padding: 10px 20px;
@@ -580,7 +532,7 @@ footer .container .row {
 footer .container .row .footer .soc-link {
   font-size: 24px;
   margin-right: 20px;
-  
+
 }
 
 footer .container .row .copyright {
@@ -750,6 +702,7 @@ footer .container .row .copyright p {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
+
 /* Styles for the theme toggle switch */
 label.switch {
   position: relative;
@@ -797,7 +750,6 @@ input:checked+span.slider:before {
   transform: translateX(26px);
 }
 
-<<<<<<< HEAD
 #backToTopBtn {
   height: 50px;
   width: 50px;
@@ -1307,6 +1259,3 @@ i.fab:hover {
   cursor: pointer;
 
 }
-=======
-
->>>>>>> d6290cabc4a1918f89f9f34a1646abb0de5d62bd
