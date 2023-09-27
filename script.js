@@ -71,11 +71,25 @@ toggleResumeSection();
 const toggleTheme = () => {
   const body = document.body;
   const themeToggleButton = document.getElementById('themeToggle');
-
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.getElementsByClassName('nav-link');
   themeToggleButton.addEventListener('change', () => {
     body.classList.toggle('dark', themeToggleButton.checked);
+
     body.classList.toggle('light', !themeToggleButton.checked);
     localStorage.setItem('theme', themeToggleButton.checked ? 'dark' : 'light');
+    if (themeToggleButton.checked && body.classList.contains('dark')) {
+      navbar.classList.add('navbar-dark');
+      navbar.classList.remove('navbar-light');
+      navLinks.style.color = '#ff1493';
+    } else {
+
+      navbar.classList.add('navbar-light', 'bg-dark');
+      navbar.classList.remove('navbar-dark', 'bg-light');
+      navLinks.style.color = themeToggleButton.checked ?
+        '#00ff00' : '#ff1493';
+    }
+
   });
 
   // Check local storage for theme preference and apply it
