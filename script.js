@@ -12,7 +12,7 @@ const backToTop = () => {
     }
   });
 
-  backToTopBtn.addEventListener("click", () => {
+backToTop(); backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 };
@@ -36,14 +36,14 @@ navLinks();
 
 // Function to handle form submission and thank you message
 const handleSubmit = (e) => {
-  const form = document.querySelector(".contact-form");
-  const thankYouMessage = document.querySelector(".thankyou_message");
+  const form = document.getElementsByClassName ("contact-form");
+  const thankYouMessage = document.getElementsByClassName("thankyou_message");
   e.preventDefault();
   form.style.display = 'none';
   thankYouMessage.style.display = 'block';
 };
 
-const form = document.querySelector(".contact-form");
+const form = document.getElementsByClassName("contact-form");
 form.addEventListener('submit', handleSubmit);
 
 // Function to show and hide the resume section
@@ -83,11 +83,10 @@ const svg = document.getElementById('portfolio-bg');
     if (themeToggleButton.checked && body.classList.contains('dark')) {
       navbar.classList.add('navbar-dark');
       svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'; navbar.classList.remove('navbar-light');
-      navLinks.style.color = '#ff1493';
     } else {
 
-      navbar.classList.add('navbar-light', 'bg-dark');
-     vg.style.filter = 'none'; navbar.classList.remove('navbar-dark', 'bg-light');
+      navbar.classList.add('navbar-light');
+     svg.style.filter = 'none'; navbar.classList.remove('navbar-dark');
 
     }
 
