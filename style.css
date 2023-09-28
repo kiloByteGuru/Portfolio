@@ -36,9 +36,6 @@ transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
   color: #ff1493;
   font-family: "Poppins", sans-serif;
 
-  .nav-link:hover {
-    color: #ffd700;
-  }
 }
 
 .dark {
@@ -132,7 +129,9 @@ nav ul.navbar-nav li a {
 
 }
 
-nav ul.navbar-nav li a:hover {}
+nav ul.navbar-nav li a:hover {
+ color: #ff5500;
+} 
 
 .navbar-toggler {
   border: none;
