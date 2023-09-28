@@ -1,6 +1,6 @@
 // Function to handle the "Back to Top" button
 const backToTop = () => {
-  const backToTopBtn = document.getElementById("backToTopBtn");
+  const backToTopBtn = document.getElementById("backToTopBtnContainer");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
