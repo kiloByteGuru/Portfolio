@@ -24,7 +24,7 @@ body {
   
 transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
     min-height: 100vh;
-    background-image: url('.img/background.svg'); 
+    background-image: url('img/background.svg'); 
     background-size: cover;
     background-repeat: no-repeat;  
   min-height: 100vh;
@@ -52,6 +52,10 @@ body.light #portfolio-bg path {
     stroke: #ff1493; 
     fill: #ffd700; 
 }
+body.dark #portfolio-bg path {
+stroke: #00ff00;
+fill: rgba(75, 0, 130);
+} 
 /* Style the theme toggle switch */
 label.switch {
   position: relative;
