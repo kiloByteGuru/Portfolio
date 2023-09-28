@@ -73,6 +73,8 @@ const toggleTheme = () => {
   const themeToggleButton = document.getElementById('themeToggle');
   const navbar = document.getElementById('navbar');
   const navLinks = document.getElementsByClassName('nav-link');
+const svg = document.getElementById('portfolio-bg');
+
   themeToggleButton.addEventListener('change', () => {
     body.classList.toggle('dark', themeToggleButton.checked);
 
@@ -80,14 +82,13 @@ const toggleTheme = () => {
     localStorage.setItem('theme', themeToggleButton.checked ? 'dark' : 'light');
     if (themeToggleButton.checked && body.classList.contains('dark')) {
       navbar.classList.add('navbar-dark');
-      navbar.classList.remove('navbar-light');
+      svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'; navbar.classList.remove('navbar-light');
       navLinks.style.color = '#ff1493';
     } else {
 
       navbar.classList.add('navbar-light', 'bg-dark');
-      navbar.classList.remove('navbar-dark', 'bg-light');
-      navLinks.style.color = themeToggleButton.checked ?
-        '#00ff00' : '#ff1493';
+     vg.style.filter = 'none'; navbar.classList.remove('navbar-dark', 'bg-light');
+
     }
 
   });
