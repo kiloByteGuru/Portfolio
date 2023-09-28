@@ -1,14 +1,15 @@
 // Function to handle the "Back to Top" button
 const backToTop = () => {
-  const backToTopBtn = document.getElementById("backToTopBtnContainer");
+  const backToTopBtn = document.getElementById("backToTopBtn");
+const backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
-      backToTopBtn.classList.remove('d-none');
-      backToTopBtn.classList.add('d-block');
+      backToTopBtnContainer.classList.remove('d-none');
+      backToTopBtnContainer.classList.add('d-block');
     } else {
-      backToTopBtn.classList.remove('d-block');
-      backToTopBtn.classList.add('d-none');
+      backToTopBtnContainer.classList.remove('d-block');
+      backToTopBtnContainer.classList.add('d-none');
     }
   });
 
@@ -27,7 +28,7 @@ const smoothScroll = (e) => {
 };
 
 const navLinks = () => {
-  const links = document.querySelectorAll(".nav-link");
+  const links = document.getElementsByClassName ("nav-link");
   links.forEach((navLink) => {
     navLink.addEventListener("click", smoothScroll);
   });
@@ -69,10 +70,10 @@ toggleResumeSection();
 
 // Function to toggle the theme and save preference to local storage
 const toggleTheme = () => {
-  const body = document.body;
+  const body = document.getElementsByTagName("body");
   const themeToggleButton = document.getElementById('themeToggle');
   const navbar = document.getElementById('navbar');
-  const navLinks = document.getElementsByClassName('nav-link');
+  const navLinks = 
 const svg = document.getElementById('portfolio-bg');
 
   themeToggleButton.addEventListener('change', () => {
@@ -81,16 +82,17 @@ const svg = document.getElementById('portfolio-bg');
     body.classList.toggle('light', !themeToggleButton.checked);
     localStorage.setItem('theme', themeToggleButton.checked ? 'dark' : 'light');
     if (themeToggleButton.checked && body.classList.contains('dark')) {
+navbar.classList.remove('navbar-light');
       navbar.classList.add('navbar-dark');
-      svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)'; navbar.classList.remove('navbar-light');
+      svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)';
     } else {
 
-      navbar.classList.add('navbar-light');
-     svg.style.filter = 'none'; navbar.classList.remove('navbar-dark');
-
+     navbar.classList.remove('navbar-dark');
+ navbar.classList.add('navbar-light');
+     svg.style.filter = 'none'; 
     }
 
-  });
+  
 
   // Check local storage for theme preference and apply it
   const savedTheme = localStorage.getItem('theme');
@@ -98,5 +100,6 @@ const svg = document.getElementById('portfolio-bg');
     themeToggleButton.checked = true;
   }
 };
+});
 
 toggleTheme();
