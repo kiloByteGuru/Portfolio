@@ -1,14 +1,12 @@
-// Function to handle the "Back to Top" button
+/// Function to handle the "Back to Top" button
 const backToTop = () => {
   const backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
-      backToTopBtnContainer.classList.remove('d-none');
-      backToTopBtnContainer.classList.add('d-block');
+      backToTopBtnContainer.style.display = 'block';
     } else {
-      backToTopBtnContainer.classList.remove('d-block');
-      backToTopBtnContainer.classList.add('d-none');
+      backToTopBtnContainer.style.display = 'none';
     }
   });
 
@@ -17,6 +15,9 @@ const backToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 };
+
+
+backToTop();
 
 // Function to handle smooth scrolling for navigation links
 const smoothScroll = (e) => {
