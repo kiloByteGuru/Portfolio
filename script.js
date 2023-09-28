@@ -1,7 +1,6 @@
 // Function to handle the "Back to Top" button
 const backToTop = () => {
-  const backToTopBtn = document.getElementById("backToTopBtn");
-const backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
+  const backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
@@ -13,7 +12,8 @@ const backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
     }
   });
 
-backToTop(); backToTopBtn.addEventListener("click", () => {
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 };
@@ -28,7 +28,7 @@ const smoothScroll = (e) => {
 };
 
 const navLinks = () => {
-  const links = document.getElementsByClassName ("nav-link");
+  const links = document.querySelectorAll(".nav-link");
   links.forEach((navLink) => {
     navLink.addEventListener("click", smoothScroll);
   });
@@ -37,14 +37,14 @@ navLinks();
 
 // Function to handle form submission and thank you message
 const handleSubmit = (e) => {
-  const form = document.getElementsByClassName ("contact-form");
-  const thankYouMessage = document.getElementsByClassName("thankyou_message");
   e.preventDefault();
+  const form = document.querySelector(".contact-form");
+  const thankYouMessage = document.querySelector(".thankyou_message");
   form.style.display = 'none';
   thankYouMessage.style.display = 'block';
 };
 
-const form = document.getElementsByClassName("contact-form");
+const form = document.querySelector(".contact-form");
 form.addEventListener('submit', handleSubmit);
 
 // Function to show and hide the resume section
@@ -70,29 +70,26 @@ toggleResumeSection();
 
 // Function to toggle the theme and save preference to local storage
 const toggleTheme = () => {
-  const body = document.getElementsByTagName("body");
+  const body = document.body;
   const themeToggleButton = document.getElementById('themeToggle');
   const navbar = document.getElementById('navbar');
-  const navLinks = 
-const svg = document.getElementById('portfolio-bg');
+  const svg = document.getElementById('portfolio-bg');
 
   themeToggleButton.addEventListener('change', () => {
     body.classList.toggle('dark', themeToggleButton.checked);
-
     body.classList.toggle('light', !themeToggleButton.checked);
     localStorage.setItem('theme', themeToggleButton.checked ? 'dark' : 'light');
-    if (themeToggleButton.checked && body.classList.contains('dark')) {
-navbar.classList.remove('navbar-light');
+    
+    if (themeToggleButton.checked) {
+      navbar.classList.remove('navbar-light');
       navbar.classList.add('navbar-dark');
       svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)';
     } else {
-
-     navbar.classList.remove('navbar-dark');
- navbar.classList.add('navbar-light');
-     svg.style.filter = 'none'; 
+      navbar.classList.remove('navbar-dark');
+      navbar.classList.add('navbar-light');
+      svg.style.filter = 'none'; 
     }
-
-  
+  });
 
   // Check local storage for theme preference and apply it
   const savedTheme = localStorage.getItem('theme');
@@ -100,6 +97,5 @@ navbar.classList.remove('navbar-light');
     themeToggleButton.checked = true;
   }
 };
-});
 
 toggleTheme();
