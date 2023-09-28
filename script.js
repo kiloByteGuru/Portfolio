@@ -1,4 +1,4 @@
-/// Function to handle the "Back to Top" button
+// Function to handle the "Back to Top" button
 const backToTop = () => {
   const backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
 
