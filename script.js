@@ -91,10 +91,11 @@ const toggleTheme = () => {
       svg.style.filter = 'none'; 
     }
   });
-themeToggleButton.addEventListener('DOMContentLoaded' , () => { 
-themeToggleButton.checked = false
-}) 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  themeToggleButton.checked = false;
+});
  // Check local storage for theme preference and apply it
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
