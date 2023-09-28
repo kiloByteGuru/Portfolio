@@ -52,11 +52,7 @@ body {
   filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
 }
 
-/* Set background image for both themes */
-body {
-  background-image: url('img/background.svg');
-  /* Other body styles go here */
-}
+
 
 /* Style the theme toggle switch */
 label.switch {
