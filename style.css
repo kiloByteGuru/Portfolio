@@ -24,7 +24,7 @@ body {
   
 transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
     min-height: 100vh;
-    background-image: url('image/background.svg'); 
+    background-image: url('.img/background.svg'); 
     background-size: cover;
     background-repeat: no-repeat;  
   min-height: 100vh;
