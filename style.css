@@ -1268,3 +1268,7 @@ i.fab:hover {
   cursor: pointer;
 
 }
+/* Apply filter for Dark Theme */
+body.dark #portfolio-bg {
+    filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
+}
