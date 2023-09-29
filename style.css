@@ -11,15 +11,11 @@
 
 
 html {
- height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
 } 
 
 body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
   transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
@@ -29,7 +25,9 @@ body {
   -webkit-backdrop-filter: blur(8px);
   font-family: "Poppins", sans-serif;
 }
-
+body.light {
+background-image: url("img/background.svg");
+}
 
 body.dark, 
 body.light {
