@@ -101,19 +101,19 @@ input:checked+span.slider:before {
 }
 
 #backToTopBtn {
-  height: 50px;
-  width: 50px;
-  position: fixed;
-  top: 80vh;
-  right: 20px;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-
-  cursor: pointer;
-  font-size: 20px;
-  transition: background-color 0.3s ease;
+   height: 50px;
+   width: 50px;
+   position: absolute; /* Use 'absolute' initially */
+   bottom: 20px;
+   right: 20px;
+   border: none;
+   outline: none;
+   border-radius: 50%;
+   cursor: pointer;
+   font-size: 20px;
+   transition: background-color 0.3s ease;
 }
+
 
 nav ul.navbar-nav {
   list-style: none;
