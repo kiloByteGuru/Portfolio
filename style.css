@@ -24,18 +24,24 @@ body {
   padding: 0;
   transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
   min-height: 100vh;
-  background-image: url("img/background.svg");
+ 
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   font-family: "Poppins", sans-serif;
 }
+body.light {
+ background-image: url("img/background.svg");
+} 
 
+body.dark {
+background-image: url("img/background-dark.svg");
+}
 
 /* Define light and dark themes */
 .light {
-  background-color: rgba(255, 215, 0, 0.7);
+  background-color: #FFD700CC;
   color: #ff1493;
   font-family: "Poppins", sans-serif;
 }
@@ -43,7 +49,7 @@ body {
 
 
 .dark {
-  background-color: rgba(75, 0, 130, 0.7);
+  background-color: #4B0082EB;
   color: #00ff00;
   font-family: "Montserrat", sans-serif;
 }
