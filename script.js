@@ -5,8 +5,12 @@ const backToTop = () => {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
       backToTopBtnContainer.style.display = 'block';
+    backToTopBtnContainer.style.position = 'fixed';
+    backToTopBtnContainer.style.bottom = '20px';
     } else {
       backToTopBtnContainer.style.display = 'none';
+ backToTopBtnContainer.style.position = 'absolute';
+    backToTopBtnContainer.style.bottom = '20px';
     }
   });
 
