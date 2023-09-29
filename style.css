@@ -27,10 +27,9 @@ body {
   background-image: url("img/background.svg");
   background-size: cover;
   background-position: center;
-  
-  /* Add backdrop filter with desired effect */
-  backdrop-filter: blur(8px); /* Adjust the blur value as needed */
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: "Poppins", sans-serif;
 }
 
 
