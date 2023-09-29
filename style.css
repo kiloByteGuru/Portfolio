@@ -29,16 +29,15 @@ body {
   -webkit-backdrop-filter: blur(8px);
   font-family: "Poppins", sans-serif;
 }
-body.light {
- background-image: url("img/background.svg");
-} 
 
-body.dark {
+
+body.dark, 
+body.light {
 background-image: url("img/background-dark.svg");
 }
 
 /* Define light and dark themes */
-.light {
+body.light {
   background-color: #FFD700CC;
   color: #ff1493;
   font-family: "Poppins", sans-serif;
@@ -46,7 +45,7 @@ background-image: url("img/background-dark.svg");
 
 
 
-.dark {
+body.dark {
   background-color: #4B0082EB;
   color: #00ff00;
   font-family: "Montserrat", sans-serif;
