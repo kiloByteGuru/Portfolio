@@ -40,10 +40,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.light #portfolio-bg {
-  stroke: #ff1493;
-  fill: #ffd700;
-}
+
 
 .dark {
   background-color: rgba(75, 0, 130, 0.7);
@@ -51,9 +48,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.dark #portfolio-bg {
-  filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
-}
+
 
 
 
