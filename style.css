@@ -100,7 +100,7 @@ input:checked+span.slider:before {
   transform: translateX(26px);
 }
 
-#backToTopBtn {
+#backToTopBtnContainer {
    height: 50px;
    width: 50px;
    position: absolute; /* Use 'absolute' initially */
