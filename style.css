@@ -23,8 +23,6 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
-  min-height: 100vh;
- 
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(8px);
