@@ -3,13 +3,9 @@ const backToTop = () => {
   const backToTopBtn = document.getElementById("backToTopBtn");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      backToTopBtn.style.display = 'block';
-      backToTopBtn.style.position = 'fixed';
-      backToTopBtn.style.bottom = '20px';
-    } else {
-      backToTopBtn.style.display = 'none';
-    }
+    backToTopBtn.style.display = window.scrollY > 100 ? 'block' : 'none';
+    backToTopBtn.style.position = window.scrollY > 100 ? 'fixed' : 'initial';
+    backToTopBtn.style.bottom = window.scrollY > 100 ? '20px' : 'initial';
   });
 
   backToTopBtn.addEventListener("click", () => {
@@ -18,7 +14,6 @@ const backToTop = () => {
 };
 
 backToTop();
-
 
 // Function to handle smooth scrolling for navigation links
 const smoothScroll = (e) => {
@@ -55,15 +50,15 @@ const toggleResumeSection = () => {
   const hideCv = document.getElementById("resume-close");
   const resumeSection = document.getElementById("resume");
 
+  const fadeInLeftClass = "animate__fadeInLeft";
+
   resumeBtn.addEventListener("click", () => {
     resumeSection.classList.remove("d-none");
-    resumeSection.classList.add("d-block");
-    resumeSection.classList.add("animate__fadeInLeft");
+    resumeSection.classList.add("d-block", fadeInLeftClass);
   });
 
   hideCv.addEventListener("click", () => {
-    resumeSection.classList.remove("d-block");
-    resumeSection.classList.remove("animate__fadeInLeft");
+    resumeSection.classList.remove("d-block", fadeInLeftClass);
     resumeSection.classList.add("d-none");
   });
 };
@@ -78,11 +73,12 @@ const toggleTheme = () => {
   const svg = document.getElementById('portfolio-bg');
 
   themeToggleButton.addEventListener('change', () => {
-    body.classList.toggle('dark', themeToggleButton.checked);
-    body.classList.toggle('light', !themeToggleButton.checked);
-    localStorage.setItem('theme', themeToggleButton.checked ? 'dark' : 'light');
-    
-    if (themeToggleButton.checked) {
+    const isDarkTheme = themeToggleButton.checked;
+    body.classList.toggle('dark', isDarkTheme);
+    body.classList.toggle('light', !isDarkTheme);
+    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+
+    if (isDarkTheme) {
       navbar.classList.remove('navbar-light');
       navbar.classList.add('navbar-dark');
       svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)';
@@ -93,11 +89,11 @@ const toggleTheme = () => {
     }
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    themeToggleButton.checked = false;
+  });
 
-document.addEventListener('DOMContentLoaded', () => {
-  themeToggleButton.checked = false;
-});
- // Check local storage for theme preference and apply it
+  // Check local storage for theme preference and apply it
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     themeToggleButton.checked = true;
