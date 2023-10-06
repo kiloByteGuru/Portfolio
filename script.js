@@ -3,13 +3,19 @@ const backToTop = () => {
   const backToTopBtn = document.getElementById("backToTopBtn");
 
   window.addEventListener("scroll", () => {
-    backToTopBtn.style.display = window.scrollY > 100 ? 'block' : 'none';
-    backToTopBtn.style.position = window.scrollY > 100 ? 'fixed' : 'initial';
-    backToTopBtn.style.bottom = window.scrollY > 100 ? '20px' : 'initial';
+    if (window.scrollY > 100) {
+      backToTopBtn.style.display = "block";
+      backToTopBtn.style.position = "fixed";
+      backToTopBtn.style.bottom = "20px";
+    } else {
+      backToTopBtn.style.display = "none";
+      backToTopBtn.style.position = "initial";
+      backToTopBtn.style.bottom = "initial";
+    }
   });
 
   backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
 
@@ -18,8 +24,9 @@ backToTop();
 // Function to handle smooth scrolling for navigation links
 const smoothScroll = (e) => {
   e.preventDefault();
-  const target = e.target.getAttribute("href");
-  document.querySelector(target).scrollIntoView({
+  const targetId = e.target.getAttribute("href").substring(1); // Remove the "#" from the href
+  const targetElement = document.getElementById(targetId);
+  targetElement.scrollIntoView({
     behavior: "smooth",
   });
 };
@@ -37,66 +44,64 @@ const handleSubmit = (e) => {
   e.preventDefault();
   const form = document.querySelector(".contact-form");
   const thankYouMessage = document.querySelector(".thankyou_message");
-  form.style.display = 'none';
-  thankYouMessage.style.display = 'block';
+  form.style.display = "none";
+  thankYouMessage.style.display = "block";
 };
 
 const form = document.querySelector(".contact-form");
-form.addEventListener('submit', handleSubmit);
+form.addEventListener("submit", handleSubmit);
 
 // Function to show and hide the resume section
 const toggleResumeSection = () => {
   const resumeBtn = document.getElementById("resume-link");
   const hideCv = document.getElementById("resume-close");
-  const resumeSection = document.getElementById("resume");
+  const resumeSection = document.getElementById("cv");
 
-  const fadeInLeftClass = "animate__fadeInLeft";
+  const fadeInLeftClass = "animate__animated animate__fadeInLeft"; // Fixed the class name
 
-  resumeBtn.addEventListener("click", () => {
-    resumeSection.classList.remove("d-none");
-    resumeSection.classList.add("d-block", fadeInLeftClass);
+  resumeBtn.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the default link behavior
+    resumeSection.style.display = "block"; // Set the display property
+    resumeSection.classList.add(fadeInLeftClass);
   });
 
   hideCv.addEventListener("click", () => {
-    resumeSection.classList.remove("d-block", fadeInLeftClass);
-    resumeSection.classList.add("d-none");
+    resumeSection.style.display = "none"; // Set the display property
+    resumeSection.classList.remove(fadeInLeftClass);
   });
 };
 
 toggleResumeSection();
 
-// Function to toggle the theme and save preference to local storage
+// Function to toggle the theme and save the preference to local storage
 const toggleTheme = () => {
   const body = document.body;
-  const themeToggleButton = document.getElementById('themeToggle');
-  const navbar = document.getElementById('navbar');
-  const svg = document.getElementById('portfolio-bg');
+  const themeToggleButton = document.getElementById("themeToggle");
+  const navbar = document.getElementById("navbar");
+  const svg = document.getElementById("portfolio-bg");
 
-  themeToggleButton.addEventListener('change', () => {
+  themeToggleButton.addEventListener("change", () => {
     const isDarkTheme = themeToggleButton.checked;
-    body.classList.toggle('dark', isDarkTheme);
-    body.classList.toggle('light', !isDarkTheme);
-    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+    body.classList.toggle("dark", isDarkTheme);
+    body.classList.toggle("light", !isDarkTheme);
+    localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
 
-    if (isDarkTheme) {
-      navbar.classList.remove('navbar-light');
-      navbar.classList.add('navbar-dark');
-      svg.style.filter = 'invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)';
-    } else {
-      navbar.classList.remove('navbar-dark');
-      navbar.classList.add('navbar-light');
-      svg.style.filter = 'none'; 
-    }
+    navbar.classList.remove(isDarkTheme ? "navbar-light" : "navbar-dark");
+    navbar.classList.add(isDarkTheme ? "navbar-dark" : "navbar-light");
+    svg.style.filter = isDarkTheme
+      ? "invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)"
+      : "none";
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     themeToggleButton.checked = false;
   });
 
-  // Check local storage for theme preference and apply it
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
+  // Check local storage for the theme preference and apply it
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
     themeToggleButton.checked = true;
+    themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the saved theme
   }
 };
 
