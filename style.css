@@ -495,128 +495,18 @@ footer .container .row .copyright p {
 
 .section#projects .row .col-md-4 .card.project {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 30px; /* Add margin-bottom to create gap between cards */
 }
 
-.section#projects .row .col-md-4 .card.project:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
+.section#projects .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px; /* Add margin-bottom to create gap between rows */
 }
 
-@-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate__fadeInLeft {
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-name: fadeInLeft;
-  animation-delay: 0s;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-name: fadeInLeft;
-}
-
-@-webkit-keyframes fadeOutRight {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-}
-
-@keyframes fadeOutRight {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-}
-
-.animate__fadeOutRight {
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-name: fadeOutRight;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-name: fadeOutRight;
-}
-
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.animate__pulse {
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: pulse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: pulse;
-}
-
-/* Project card styles */
 .project-card {
   align-items: center;
   background-color: #fff;
@@ -676,6 +566,7 @@ i.fab:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
+
 /* Apply filter for Dark Theme */
 body.dark #portfolio-bg {
   filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);

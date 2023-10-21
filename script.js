@@ -2,21 +2,24 @@
 const backToTop = () => {
   const backToTopBtn = document.getElementById("backToTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      backToTopBtn.style.display = "block";
-      backToTopBtn.style.position = "fixed";
-      backToTopBtn.style.bottom = "20px";
-    } else {
-      backToTopBtn.style.display = "none";
-      backToTopBtn.style.position = "initial";
-      backToTopBtn.style.bottom = "initial";
-    }
-  });
+  if (backToTopBtn) {
+    // Check if the element exists before adding an event listener
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        backToTopBtn.style.display = "block";
+        backToTopBtn.style.position = "fixed";
+        backToTopBtn.style.bottom = "20px";
+      } else {
+        backToTopBtn.style.display = "none";
+        backToTopBtn.style.position = "initial";
+        backToTopBtn.style.bottom = "initial";
+      }
+    });
 
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 };
 
 backToTop();
@@ -94,7 +97,11 @@ const toggleTheme = () => {
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    themeToggleButton.checked = false;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      themeToggleButton.checked = true;
+      themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the saved theme
+    }
   });
 
   // Check local storage for the theme preference and apply it
@@ -102,7 +109,15 @@ const toggleTheme = () => {
   if (savedTheme === "dark") {
     themeToggleButton.checked = true;
     themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the saved theme
+  } else {
+    themeToggleButton.checked = false;
+    themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the default light theme
   }
+
+  // Delete saved theme from local storage on page close
+  window.addEventListener("beforeunload", () => {
+    localStorage.removeItem("theme");
+  });
 };
 
 toggleTheme();
