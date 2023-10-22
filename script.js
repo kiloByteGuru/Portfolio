@@ -1,9 +1,7 @@
-// Function to handle the "Back to Top" button
 const backToTop = () => {
   const backToTopBtn = document.getElementById("backToTopBtn");
 
   if (backToTopBtn) {
-    // Check if the element exists before adding an event listener
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
         backToTopBtn.style.display = "block";
@@ -24,10 +22,9 @@ const backToTop = () => {
 
 backToTop();
 
-// Function to handle smooth scrolling for navigation links
 const smoothScroll = (e) => {
   e.preventDefault();
-  const targetId = e.target.getAttribute("href").substring(1); // Remove the "#" from the href
+  const targetId = e.target.getAttribute("href").substring(1);
   const targetElement = document.getElementById(targetId);
   targetElement.scrollIntoView({
     behavior: "smooth",
@@ -42,7 +39,6 @@ const navLinks = () => {
 };
 navLinks();
 
-// Function to handle form submission and thank you message
 const handleSubmit = (e) => {
   e.preventDefault();
   const form = document.querySelector(".contact-form");
@@ -54,29 +50,27 @@ const handleSubmit = (e) => {
 const form = document.querySelector(".contact-form");
 form.addEventListener("submit", handleSubmit);
 
-// Function to show and hide the resume section
 const toggleResumeSection = () => {
   const resumeBtn = document.getElementById("resume-link");
   const hideCv = document.getElementById("resume-close");
   const resumeSection = document.getElementById("cv");
 
-  const fadeInLeftClass = "animate__animated animate__fadeInLeft"; // Fixed the class name
+  const fadeInLeftClass = "animate__animated animate__fadeInLeft";
 
   resumeBtn.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent the default link behavior
-    resumeSection.style.display = "block"; // Set the display property
+    e.preventDefault();
+    resumeSection.style.display = "block";
     resumeSection.classList.add(fadeInLeftClass);
   });
 
   hideCv.addEventListener("click", () => {
-    resumeSection.style.display = "none"; // Set the display property
+    resumeSection.style.display = "none";
     resumeSection.classList.remove(fadeInLeftClass);
   });
 };
 
 toggleResumeSection();
 
-// Function to toggle the theme and save the preference to local storage
 const toggleTheme = () => {
   const body = document.body;
   const themeToggleButton = document.getElementById("themeToggle");
@@ -100,21 +94,19 @@ const toggleTheme = () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       themeToggleButton.checked = true;
-      themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the saved theme
+      themeToggleButton.dispatchEvent(new Event("change"));
     }
   });
 
-  // Check local storage for the theme preference and apply it
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     themeToggleButton.checked = true;
-    themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the saved theme
+    themeToggleButton.dispatchEvent(new Event("change"));
   } else {
     themeToggleButton.checked = false;
-    themeToggleButton.dispatchEvent(new Event("change")); // Trigger change event to apply the default light theme
+    themeToggleButton.dispatchEvent(new Event("change"));
   }
 
-  // Delete saved theme from local storage on page close
   window.addEventListener("beforeunload", () => {
     localStorage.removeItem("theme");
   });

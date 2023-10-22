@@ -293,43 +293,6 @@ section p {
   background-color: #ff5500;
 }
 
-@-webkit-keyframes wobble {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-  }
-
-  30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-  }
-
-  45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-  }
-
-  60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-  }
-
-  75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @keyframes wobble {
   from {
     -webkit-transform: translate3d(0, 0, 0);
@@ -340,42 +303,7 @@ section p {
     -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
     transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
   }
-
-  30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-  }
-
-  45% {
-    -webkit_transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-  }
-
-  60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-  }
-
-  75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
 }
-
-.animate__wobble {
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: wobble;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: wobble;
-}
-
 .section#projects {
   padding: 100px 0;
 }
@@ -387,13 +315,21 @@ section p {
 }
 
 .section#projects .row .col-md-4 .card.project {
-  height: 80%;
+  height: 100%;
+  width: 100%;
   margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  text-align: center;
 }
 
 .section#projects .row .col-md-4 .card.project img {
+  border-radius: 10px;
   height: 50%;
   max-width: 100%;
 }
@@ -493,20 +429,6 @@ footer .container .row .copyright p {
   margin: 0;
 }
 
-.section#projects .row .col-md-4 .card.project {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 30px; /* Add margin-bottom to create gap between cards */
-}
-
-.section#projects .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 30px; /* Add margin-bottom to create gap between rows */
-}
-
 .project-card {
   align-items: center;
   background-color: #fff;
@@ -569,5 +491,6 @@ i.fab:hover {
 
 /* Apply filter for Dark Theme */
 body.dark #portfolio-bg {
+  filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg); /* IE 6-9 */ /* Firefox 19+ */ /* Chrome 21+ */ /* Safari 6.0+ */ /* Opera 15+ */
   filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
 }
