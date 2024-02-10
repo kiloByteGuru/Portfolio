@@ -22,6 +22,7 @@ body {
   padding: 0;
   transition: background-color 0.5s ease, color 0.5s ease, font-family 0.5s ease;
 }
+
 body.light {
   background-image: url("img/background.svg");
 }
@@ -34,7 +35,6 @@ body.light {
 body.light {
   background-color: #ffd700cc;
   color: #ff1493;
-  font-family: "Poppins", sans-serif;
 }
 
 body.dark {
@@ -43,10 +43,14 @@ body.dark {
   font-family: "Montserrat", sans-serif;
 }
 
+#themeSwitch {
+  float: right;
+  margin-left: 20px;
+}
+
 label.switch {
   display: inline-block;
   height: 34px;
-  margin-right: 10px;
   position: relative;
   width: 60px;
 }
@@ -80,11 +84,11 @@ span.slider:before {
   width: 26px;
 }
 
-input:checked + span.slider {
+input:checked+span.slider {
   background-color: #2196f3;
 }
 
-input:checked + span.slider:before {
+input:checked+span.slider:before {
   transform: translateX(26px);
 }
 
@@ -182,37 +186,12 @@ section p {
 }
 
 .hero-img {
-  border-radius: 50%;
-  height: 250px;
+  height: 100%;
   margin-bottom: 20px;
   margin: 0 auto;
-  width: 250px;
-}
-
-.hero-img:hover {
-  border-radius: 0px;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-.hero-img img {
-  border-radius: 50%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
   width: 100%;
-}
-
-.hero-img img:hover {
-  border-radius: 0px;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-.hero-img img:hover {
-  object-fit: contain;
-  object-position: center;
-  transition: all 0.3s ease;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 #resume-link,
@@ -281,6 +260,7 @@ section p {
 .section {
   margin-bottom: 0.5rem;
 }
+
 .section#projects {
   padding: 100px 0;
 }
@@ -468,7 +448,6 @@ i.fab:hover {
 
 body.dark #portfolio-bg {
   filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
-  filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
 }
 
 .animate__wobble {
@@ -480,4 +459,63 @@ body.dark #portfolio-bg {
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+#main {
+  padding-top: 56px;
+}
+
+.about {
+  padding: 100px 0;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about h2 {
+    font-size: 48px;
+  }
+
+  .about p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-img {
+    border-radius: 50%;
+    height: 250px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    width: 250px;
+  }
+
+  .hero-img img {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+  }
+
+  .hero-img img:hover {
+    border-radius: 0px;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
+  .hero-img img:hover {
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.3s ease;
+  }
+}
+
+.active {
+  background-color: #ff5500;
+  color: white;
 }
