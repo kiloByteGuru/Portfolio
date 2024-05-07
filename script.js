@@ -1,27 +1,6 @@
 const form = document.querySelector(".contact-form");
 form.addEventListener("submit", handleSubmit);
 
-const toggleResumeSection = () => {
-  const resumeBtn = document.getElementById("resume-link");
-  const hideCv = document.getElementById("resume-close");
-  const resumeSection = document.getElementById("cv");
-
-  const fadeInLeftClass = "animate__animated animate__fadeInLeft";
-
-  resumeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    resumeSection.style.display = "block";
-    resumeSection.classList.add(fadeInLeftClass);
-  });
-
-  hideCv.addEventListener("click", () => {
-    resumeSection.style.display = "none";
-    resumeSection.classList.remove(fadeInLeftClass);
-  });
-};
-
-toggleResumeSection();
-
 const toggleTheme = () => {
   const body = document.body;
   const themeToggleButton = document.getElementById("themeToggle");
